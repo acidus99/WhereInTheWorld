@@ -24,11 +24,17 @@ namespace WhereInTheWorld.Cgi
 
                 //now output results
 
+                Uri url = cgi.RequestUrl;
+                
+
                 cgi.Success();
-                GameRenderer renderer = new GameRenderer(cgi.Writer, Engine);
+                GameRenderer renderer = new GameRenderer(cgi.Writer, Engine, GetGameUrl(cgi));
                 renderer.DrawState(State);
             }
         }
+
+        static string GetGameUrl(CgiWrapper cgi)
+            => $"gemini://{cgi.RequestUrl.Host}{cgi.RequestUrl.AbsolutePath}";
 
         static List<string> ParseGuesses(CgiWrapper cgi)
         {
