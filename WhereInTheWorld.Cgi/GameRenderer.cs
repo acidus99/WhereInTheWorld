@@ -9,11 +9,13 @@ namespace WhereInTheWorld.Cgi
         GameEngine Engine;
         TextWriter Output;
         GameState State;
+        string Url;
 
-        public GameRenderer(TextWriter output, GameEngine engine)
+        public GameRenderer(TextWriter output, GameEngine engine, string url)
         {
             Output = output;
             Engine = engine;
+            Url = url;
         }
 
         public void DrawState(GameState state)
@@ -44,6 +46,7 @@ namespace WhereInTheWorld.Cgi
                 {
                     DrawLoseScreen();
                 }
+                DrawSummary();
             }
         }
 
@@ -85,7 +88,7 @@ namespace WhereInTheWorld.Cgi
             {
                 counter++;
                 Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
-                    $"| {guess.Distance} km | {BearingToEmoji(guess)} | {PercentAway(guess)}"); 
+                    $"| {guess.Distance} km | {BearingToEmoji(guess)} | {PercentAway(guess).ToString("P0")}"); 
             }
         }
 
@@ -111,26 +114,61 @@ namespace WhereInTheWorld.Cgi
 
         private void DrawWinScreen()
         {
-            Output.WriteLine($"Congradulations! You correctly picked {State.TargetCountry.Name}!");
-            Output.WriteLine("Come back tomorrow for another puzzle.");
+            Output.WriteLine($"## You Win!");
+            Output.WriteLine($"Congratulations! You correctly picked {State.TargetCountry.Name}!");
+            Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
         }
 
         private void DrawLoseScreen()
         {
-            Output.WriteLine($"Nope! The Country was {State.TargetCountry.Name}.");
-            Output.WriteLine("Come back tomorrow for another puzzle.");
+            Output.WriteLine($"## Bummer");
+            Output.WriteLine($"Nice try, but the country was {State.TargetCountry.Name}.");
+            Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
         }
 
-        private string DrawSummary()
+        private void DrawSummary()
         {
-            return "";
+            Output.WriteLine("## Share Game Summary");
+            Output.WriteLine("Copy and share the summary of your game below on Station");
+            Output.WriteLine("```game summary for copying");
+            Output.WriteLine($"Where In The World • Puzzle #{State.PuzzleNumber} • {DateTime.Today.ToString("yyyy-MM-dd")}");
+            foreach (var guess in State.GuessResults)
+            {
+                Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
+            }
+            Output.WriteLine(Url);
+            Output.WriteLine("```");
+        }
+
+        private string ClosenessGraph(Guess guess)
+        {
+            double percent = PercentAway(guess);
+            if (percent < .2)
+            {
+                return "❌❌❌❌❌";
+            }
+            else if (percent < .4)
+            {
+                return "✅❌❌❌❌";
+            } else if (percent < .6)
+            {
+                return "✅✅❌❌❌";
+            } else if (percent < .8)
+            {
+                return "✅✅✅❌❌";
+            }
+            else if (percent < 1)
+            {
+                return "✅✅✅✅❌";
+            }
+            return "✅✅✅✅✅";
         }
 
         private string BearingToEmoji(Guess guess)
         {
             if(guess.IsCorrect)
             {
-                return "🎉🎉🎉";
+                return "🎉";
             }
 
             //normalize bearing into 45 degree points;
@@ -163,8 +201,8 @@ namespace WhereInTheWorld.Cgi
             }
         }
 
-        private string PercentAway(Guess guess)
-            => Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000))).ToString("P0");
+        private double PercentAway(Guess guess)
+            => Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
 
     }
 }
