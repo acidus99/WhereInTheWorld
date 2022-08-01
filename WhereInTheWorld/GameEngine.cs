@@ -9,7 +9,7 @@ namespace WhereInTheWorld
 {
     public class GameEngine
     {
-        static readonly DateTime InitialPuzzle = DateTime.Today;
+        static readonly DateTime InitialPuzzle = new DateTime(2022, 8,1);
 
         public Dictionary<string, Country> Countries { get; internal set; }
 
