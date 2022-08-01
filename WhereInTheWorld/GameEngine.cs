@@ -31,7 +31,7 @@ namespace WhereInTheWorld
         {
             //select target country for the game
             //currently derived from date, so consistent and changes once a day
-            var targetCountry = PickTargetCountry();
+            var targetCountry = PickCountryForPuzzle();
             state.TargetCountry = targetCountry;
             state.PuzzleNumber = ComputePuzzleNumber();
 
@@ -72,7 +72,7 @@ namespace WhereInTheWorld
                 ?.Where(x=>x.HasMap).ToDictionary(x => x.Code, x => x);
         }
 
-        private Country PickTargetCountry()
+        public Country PickCountryForPuzzle()
         {
             var md5 = MD5.Create();
             var bytes = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes("hello" + DateTime.Now.DayOfYear.ToString()));

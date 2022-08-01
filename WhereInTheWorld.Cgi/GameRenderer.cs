@@ -67,6 +67,7 @@ namespace WhereInTheWorld.Cgi
             Output.WriteLine("``` Geoography you are guessing");
             Output.Write(AsciiMapForCountry(State.TargetCountry));
             Output.WriteLine("```");
+            Output.WriteLine($"=> {RouteOptions.PngUrl} See high resolution image");
             if(State.IsDebug)
             {
                 Output.WriteLine($"Debug: Geography is {State.TargetCountry.Name}");

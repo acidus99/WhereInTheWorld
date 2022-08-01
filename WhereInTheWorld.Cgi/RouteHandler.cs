@@ -20,6 +20,15 @@ namespace WhereInTheWorld.Cgi
             renderer.DrawState(state);
         }
 
+        public static void ShowPng(CgiWrapper cgi)
+        {
+            var engine = new GameEngine(cgi.ExecutingPath);
+            var country =  engine.PickCountryForPuzzle();
+            cgi.Success("image/png");
+            cgi.Out.Write(File.ReadAllBytes(Path.Combine(engine.ExecutionPath, $"assets/png/{country.Code.ToLower()}.png")));
+        }
+
+
         static string GetGameUrl(CgiWrapper cgi)
             => $"gemini://{cgi.RequestUrl.Host}{cgi.RequestUrl.AbsolutePath}";
 

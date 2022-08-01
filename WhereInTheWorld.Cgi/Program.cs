@@ -11,6 +11,7 @@ namespace WhereInTheWorld.Cgi
         {
             var cgiRouter = new CgiRouter();
             cgiRouter.OnRequest("", RouteHandler.PlayGame);
+            cgiRouter.OnRequest("/png", RouteHandler.ShowPng);
             cgiRouter.ProcessRequest();
         }
 
