@@ -133,7 +133,7 @@ namespace WhereInTheWorld.Cgi
             Output.WriteLine("## Share Game Summary");
             Output.WriteLine("Copy and share the summary of your game below on Station");
             Output.WriteLine("```game summary for copying");
-            Output.WriteLine($"Where In The World • Puzzle #{State.PuzzleNumber} • {DateTime.Today.ToString("yyyy-MM-dd")}");
+            Output.WriteLine($"Where In The World? • Puzzle #{State.PuzzleNumber} • {DateTime.Today.ToString("yyyy-MM-dd")}");
             foreach (var guess in State.GuessResults)
             {
                 Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
