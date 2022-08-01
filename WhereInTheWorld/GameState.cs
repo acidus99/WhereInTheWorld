@@ -7,7 +7,7 @@ namespace WhereInTheWorld
 {
     public class GameState
     {
-        public bool IsDebug { get; set; } = true;
+        public bool IsDebug { get; set; } = false;
 
         public List<string> InputGuesses { get; set; } = new List<string>();
 
