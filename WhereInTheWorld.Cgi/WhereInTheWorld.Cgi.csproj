@@ -498,10 +498,15 @@
     <None Remove="assets\png\za.png" />
     <None Remove="assets\png\zm.png" />
     <None Remove="assets\png\zw.png" />
+    <None Remove="static\" />
+    <None Remove="static\help.gmi" />
+    <None Remove="static\index.gmi" />
+    <None Remove="static\faq.gmi" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
     <Folder Include="assets\png\" />
+    <Folder Include="static\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\ad.60.txt">
@@ -1956,5 +1961,19 @@
     <Content Include="assets\png\zw.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="static\help.gmi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="static\index.gmi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="static\faq.gmi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="static\faq.gmi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

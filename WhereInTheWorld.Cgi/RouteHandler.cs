@@ -18,6 +18,7 @@ namespace WhereInTheWorld.Cgi
             cgi.Success();
             GameRenderer renderer = new GameRenderer(cgi.Writer, engine, GetGameUrl(cgi));
             renderer.DrawState(state);
+            Footer(cgi);
         }
 
         public static void ShowPng(CgiWrapper cgi)
@@ -27,7 +28,6 @@ namespace WhereInTheWorld.Cgi
             cgi.Success("image/png");
             cgi.Out.Write(File.ReadAllBytes(Path.Combine(engine.ExecutionPath, $"assets/png/{country.Code.ToLower()}.png")));
         }
-
 
         static string GetGameUrl(CgiWrapper cgi)
             => $"gemini://{cgi.RequestUrl.Host}{cgi.RequestUrl.AbsolutePath}";
@@ -46,7 +46,12 @@ namespace WhereInTheWorld.Cgi
             return new List<string>();
         }
 
-
+        static void Footer(CgiWrapper cgi)
+        {
+            cgi.Writer.WriteLine();
+            cgi.Writer.WriteLine("--");
+            cgi.Writer.WriteLine("=> mailto:acidus@gemi.dev Made with 🌎 and ❤️ by Acidus");
+        }
     }
 }
 

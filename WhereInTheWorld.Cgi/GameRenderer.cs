@@ -78,8 +78,9 @@ namespace WhereInTheWorld.Cgi
         private void DrawTitle()
         {
             Output.WriteLine("# 🗺 Where in the World?");
+            Output.WriteLine($"=> {RouteOptions.HelpUrl} How to play");
+            Output.WriteLine($"=> {RouteOptions.FaqUrl} FAQ");
             Output.WriteLine($"## Puzzle #{State.PuzzleNumber} - {DateTime.Today.ToString("yyyy-MM-dd")}");
-            Output.WriteLine();
         }
 
         private void DrawGuesses()

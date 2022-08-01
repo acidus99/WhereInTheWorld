@@ -1,0 +1,42 @@
+﻿# 🗺 Where In The World?
+
+Where In the World (WITW) is a geography puzzle game.
+
+Every day, a new country or territory is selected. You have 6 guesses to name it. The game resets every day.
+
+## How do I play?
+
+At the top of the screen there is an ASCII art image of the country, as well as a link a higher resolution image.
+
+Below is a list of countries or territories to guess. Just click on a link to guess that country. As you guess countries, your guesses will be removed from the list.
+
+When you guess, WITW tells you how close you are. For example, if I guess "Cuba", and I see this:
+
+* Guess 1. Cuba | 7982 km | ➡️ | 60 %
+
+My guess was wrong. The actual country is 7982 kilometers to the west of Cuba. I'm 60% close.
+Next I guess "Algeria" and get:
+
+* Guess 2. Algeria | 2164 km | ⬆️ | 89 %
+
+Oh nice! I'm wrong again, but I'm getting close! The actual country is 2164 km north of Algeria. I'm going to try "Belgium"
+
+* Guess 3. Belgium | 494 km | ↘️ | 98 %
+
+Almost there. The actual country is just 494 km south east of Beligum. I guess "Switzerland"
+
+* Guess 4. Switzerland | 0 km | 🎉 | 100 %
+
+Hurray, I win! WITW also generates a spoiler-free game summary, that shows how close you were with each guess. You can use this to share you victory on Station!
+
+## Tips
+
+* If you don't know, its helpful to pick a country you do know the location of, even if you know that's not the answer, just to give you a data point about how close you are and what direction you need to go in.
+* Look at the borders closely. This can help you determine if its an island, or a coastal country, or another feature.
+* The earth is approximately 40,000 km around. Your guess will never be farther away than about 20,000 km. If you see a guess that is like 16,000 km away, think about what countries are on the other side of the world from your guess.
+
+## I hax0r3d your game
+The guesses are stored in the query string. You can totally cheat but "undoing" a guess by removing it from your query string. I could prevent this by requiring client-side certificates and tracking state server-side, but that would increase the work you have to do to play the game. And you could still cheat by just looking at a world map. I can't stop you from cheating. Don't be a jerk.
+
+--
+=> mailto:acidus@gemi.dev Made with 🌎 and ❤️ by Acidus

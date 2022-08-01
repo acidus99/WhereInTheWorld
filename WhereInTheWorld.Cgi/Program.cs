@@ -9,10 +9,11 @@ namespace WhereInTheWorld.Cgi
 
         static void Main(string[] args)
         {
-            var cgiRouter = new CgiRouter();
-            cgiRouter.OnRequest("", RouteHandler.PlayGame);
-            cgiRouter.OnRequest("/png", RouteHandler.ShowPng);
-            cgiRouter.ProcessRequest();
+            var router = new CgiRouter();
+            router.SetStaticRoot("static/");
+            router.OnRequest("/play", RouteHandler.PlayGame);
+            router.OnRequest("/png", RouteHandler.ShowPng);
+            router.ProcessRequest();
         }
 
     }
