@@ -43,17 +43,17 @@ namespace WhereInTheWorld
                 var country = Countries[guessedCode];
 
                 GeoCoordinate GuessGeo = new GeoCoordinate(country.Latitude, country.Longitude);
-                bool isCorrent = (guessedCode == targetCountry.Code);
+                bool isCorrect = (guessedCode == targetCountry.Code);
 
                 state.GuessResults.Add(new Guess
                 {
                     Country = country,
-                    IsCorrect = isCorrent,
+                    IsCorrect = isCorrect,
                     Bearing = GuessGeo.RhumbBearingTo(targetGeo),
                     Distance = Convert.ToInt32(GuessGeo.DistanceTo(targetGeo, DistanceType.KILOMETERS))
                 });
 
-                if (isCorrent)
+                if (isCorrect)
                 {
                     break;
                 }
