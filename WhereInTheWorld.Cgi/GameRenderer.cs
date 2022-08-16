@@ -159,9 +159,13 @@ namespace WhereInTheWorld.Cgi
             {
                 return "✅✅✅❌❌";
             }
-            else if (percent < 1)
+            else if (percent < .9)
             {
                 return "✅✅✅✅❌";
+            }
+            else if (percent < 1)
+            {
+                return "✅✅✅✅🤏";
             }
             return "✅✅✅✅✅";
         }
