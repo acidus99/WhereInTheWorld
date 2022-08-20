@@ -37,12 +37,14 @@ namespace WhereInTheWorld.Cgi
             if (!state.IsComplete)
             {
                 DrawInputOptions();
-            } else
+            }
+            else
             {
-                if(state.IsWin)
+                if (state.IsWin)
                 {
                     DrawWinScreen();
-                } else
+                }
+                else
                 {
                     DrawLoseScreen();
                 }
@@ -92,6 +94,7 @@ namespace WhereInTheWorld.Cgi
                 Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
                     $"| {guess.Distance} km | {BearingToEmoji(guess)} | {PercentAway(guess).ToString("P0")}"); 
             }
+            Output.WriteLine();
         }
 
         private void DrawInputOptions()
@@ -110,7 +113,7 @@ namespace WhereInTheWorld.Cgi
                     Output.WriteLine();
                 }
                 previous = country.Name;
-                Output.WriteLine($"=> ?{prevInput},{country.Code} {country.Name}");
+                Output.WriteLine($"=> {RouteOptions.PlayUrl}?{prevInput},{country.Code} {country.Name}");
             }
         }
 
@@ -119,6 +122,7 @@ namespace WhereInTheWorld.Cgi
             Output.WriteLine($"## You Win!");
             Output.WriteLine($"Congratulations! You correctly picked {State.TargetCountry.Name}!");
             Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+            Output.WriteLine();
         }
 
         private void DrawLoseScreen()
@@ -126,6 +130,7 @@ namespace WhereInTheWorld.Cgi
             Output.WriteLine($"## Bummer");
             Output.WriteLine($"Nice try, but the country was {State.TargetCountry.Name}.");
             Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+            Output.WriteLine();
         }
 
         private void DrawSummary()
