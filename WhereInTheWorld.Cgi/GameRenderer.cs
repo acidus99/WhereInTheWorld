@@ -213,7 +213,17 @@ namespace WhereInTheWorld.Cgi
         }
 
         private double PercentAway(Guess guess)
-            => Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
+        {
+            var precise = Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
+            //don't allow lower numbers to be 0%
+            if(precise <= 0.009)
+            {
+                return 0.01;
+            }
+            //truncate to make percentage whole numbers. This prevents "rounding up" by later string functions
+            return Math.Truncate(precise * 100) / 100;
+        }
+            
 
     }
 }
