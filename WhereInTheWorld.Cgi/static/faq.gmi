@@ -13,11 +13,11 @@ A new puzzle is available every day at 0:00 GMT. New puzzles generate automatica
 ## Where can I play previous puzzles?
 Right now, you can't.
 
-## How many countries and terrorities are there?
+## How many countries and territories are there?
 242
 
 ## Why isn't [blank] a valid guess?
-I really don't want to get into politics of "what's a country" so I'm using ISO 3166-1 standard for the country code list. I also need to have a free, high resolution, monochrome map of the country, so certain valid territories have fallen off.
+I really don't want to get into the politics of "what's a country" so I'm using ISO 3166-1 standard for the country code list. I also need to have a free, high resolution, monochrome map of the country, so certain valid territories have fallen off.
 
 ## What is the proximity percent?
 It's a concise way to represent the "closeness" of your guess. If your guess is at the opposite side of the world, you'll get 0%, if you guess the country, you'll get 100%.
