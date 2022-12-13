@@ -23,12 +23,11 @@ I really don't want to get into politics of "what's a country" so I'm using ISO 
 It's a concise way to represent the "closeness" of your guess. If your guess is at the opposite side of the world, you'll get 0%, if you guess the country, you'll get 100%.
 
 ## How are distances computed?
-The distance displayed for a guess is the distance between the center of the guessed country, and the actual country.
-For instance, the distance between United States and Canada is 2260 km even if they are next to each other.
+The distance displayed for a guess is the distance between the center of the guessed country, and the actual country. For instance, the distance between United States and Canada is 2260 km even if they are next to each other.
 
 There are two reasons for this::
-- It's much easier to compute distance like this instead trying to do the math about borders.
-- You can deduce information about the size of the target country with this information.
+* It's much easier to compute distance like this instead trying to do the math about borders.
+* You can deduce information about the size of the target country with this information.
 
 ## Will you tell me the answer to today's puzzle?
 No.
