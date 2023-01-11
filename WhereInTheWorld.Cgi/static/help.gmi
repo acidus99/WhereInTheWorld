@@ -1,4 +1,4 @@
-﻿# 🗺 Help - Where In The World?
+# 🗺 Help - Where In The World?
 
 Where In the World (WITW) is a geography puzzle game.
 
