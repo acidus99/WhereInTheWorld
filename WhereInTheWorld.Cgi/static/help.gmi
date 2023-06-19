@@ -60,7 +60,7 @@ Hurray, I win! WITW also generates a spoiler-free game summary, that shows how c
 * The earth is approximately 40,000 km around. Your guess will never be farther away than about 20,000 km. If you see a guess that is like 16,000 km away, think about what countries are on the other side of the world from your guess.
 
 ## I hax0r3d your game
-The guesses are stored in the query string. You can totally cheat but "undoing" a guess by removing it from your query string. I could prevent this by requiring client-side certificates and tracking state server-side, but that would increase the work you have to do to play the game. And you could still cheat by just looking at a world map. I can't stop you from cheating. Don't be a jerk.
+The guesses are stored in the URL's query string. You can totally cheat by "undoing" a guess by removing it from your query string. I could prevent this by requiring client-side certificates and tracking state server-side, but that would increase the work you have to do to play the game. And you could still cheat by just looking at a world map. I can't stop you from cheating. Don't be a jerk.
 
 --
 => mailto:acidus@gemi.dev Made with 🌎 and ❤️ by Acidus
