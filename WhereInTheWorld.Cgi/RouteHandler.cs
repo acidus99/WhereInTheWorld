@@ -52,10 +52,10 @@ namespace WhereInTheWorld.Cgi
         }
 
         static CountryData LoadCountryData(string rootPath)
-            => new CountryData($"{rootPath}data/countries.json");
+            => new CountryData($"{rootPath}/data/countries.json");
 
         static string GetAssetsPath(string rootPath)
-            => $"{rootPath}assets/";
+            => $"{rootPath}/assets/";
 
         static void Footer(CgiWrapper cgi)
         {
