@@ -9,14 +9,14 @@ namespace WhereInTheWorld.Cgi
         readonly CountryData Countries;
         readonly TextWriter Output;
         readonly string AssetsPath;
-        readonly string Url;
+        readonly string PlayUrl;
 
         public GameRenderer(TextWriter output, CountryData countries, string assetsPath, string url)
         {
             Output = output;
             Countries = countries;
             AssetsPath = assetsPath;
-            Url = url;
+            PlayUrl = url;
         }
 
         public void DrawState(GameState state)
@@ -133,7 +133,7 @@ namespace WhereInTheWorld.Cgi
             {
                 Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
             }
-            Output.WriteLine(Url);
+            Output.WriteLine(PlayUrl);
             Output.WriteLine("```");
         }
 
