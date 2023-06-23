@@ -8,7 +8,7 @@ namespace WhereInTheWorld.Cgi
     {
         GameEngine Engine;
         TextWriter Output;
-        GameState State;
+        GameState State = null!;
         string Url;
 
         public GameRenderer(TextWriter output, GameEngine engine, string url)
@@ -28,7 +28,6 @@ namespace WhereInTheWorld.Cgi
                 {
                     Output.WriteLine($"* {country.Code} {country.Name}");
                 }
-
             }
 
             DrawTitle();

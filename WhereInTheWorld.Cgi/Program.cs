@@ -6,7 +6,6 @@ namespace WhereInTheWorld.Cgi
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             var router = new CgiRouter();
