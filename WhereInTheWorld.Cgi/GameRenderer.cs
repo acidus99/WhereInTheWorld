@@ -22,14 +22,6 @@ namespace WhereInTheWorld.Cgi
         {
             State = state;
 
-            foreach(var country in Engine.Countries.Values)
-            {
-                if(AsciiMapForCountry(country) == "")
-                {
-                    Output.WriteLine($"* {country.Code} {country.Name}");
-                }
-            }
-
             DrawTitle();
             DrawCountry();
             DrawGuesses();
