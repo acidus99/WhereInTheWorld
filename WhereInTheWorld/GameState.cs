@@ -9,12 +9,12 @@ namespace WhereInTheWorld
     {
         public bool IsDebug { get; set; } = false;
 
-        public List<string> InputGuesses { get; set; } = new List<string>();
+        public required List<string> InputGuesses { get; set; }
 
         public List<Guess> GuessResults { get; set; } = new List<Guess>();
-        public Country TargetCountry { get; set; } = null;
+        public required Country TargetCountry { get; set; }
 
-        public int PuzzleNumber { get; set; }
+        public required int PuzzleNumber { get; set; }
 
         //is the game complete?
         public bool IsComplete
@@ -23,7 +23,6 @@ namespace WhereInTheWorld
         //did they win the game?
         public bool IsWin
             => GuessResults.Count > 0 && GuessResults.Last().IsCorrect;
-
     }
 }
 

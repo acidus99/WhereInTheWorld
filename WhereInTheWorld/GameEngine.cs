@@ -21,21 +21,27 @@ namespace WhereInTheWorld
         public GameEngine(string execPath)
         {
             ExecutionPath = execPath;
-            LoadData();
+            Countries = LoadCountryData();
         }
 
         public bool IsValidCountry(string code)
             => Countries.ContainsKey(code.ToUpper());
 
-        public void Play(GameState state)
+        /// <summary>
+        /// Given a set of guess, run the game and return the game state
+        /// </summary>
+        /// <param name="guesses">list of country codes the player has guessed</param>
+        /// <returns>the state of the game</returns>
+        public GameState Play(List<string> guesses)
         {
-            //select target country for the game
-            //currently derived from date, so consistent and changes once a day
-            var targetCountry = PickCountryForPuzzle();
-            state.TargetCountry = targetCountry;
-            state.PuzzleNumber = ComputePuzzleNumber();
+            var state = new GameState
+            {
+                InputGuesses = guesses,
+                TargetCountry = PickCountryForPuzzle(),
+                PuzzleNumber = ComputePuzzleNumber()
+            };
 
-            var targetGeo = new GeoCoordinate(targetCountry.Latitude, targetCountry.Longitude);
+            var targetGeo = new GeoCoordinate(state.TargetCountry.Latitude, state.TargetCountry.Longitude);
 
             //score the results
             foreach (string guessedCode in state.InputGuesses)
@@ -43,7 +49,7 @@ namespace WhereInTheWorld
                 var country = Countries[guessedCode];
 
                 GeoCoordinate GuessGeo = new GeoCoordinate(country.Latitude, country.Longitude);
-                bool isCorrect = (guessedCode == targetCountry.Code);
+                bool isCorrect = (guessedCode == state.TargetCountry.Code);
 
                 state.GuessResults.Add(new Guess
                 {
@@ -58,18 +64,23 @@ namespace WhereInTheWorld
                     break;
                 }
             }
+
+            return state;
         }
 
         private int ComputePuzzleNumber()
             => Convert.ToInt32(Math.Floor(DateTime.Now.Subtract(InitialPuzzle).TotalDays)) + 1;
-        
 
-        private void LoadData()
+        private Dictionary<string, Country> LoadCountryData()
         {
             var json = File.ReadAllText(Path.Combine(ExecutionPath, "data/countries.json"));
+            var countries = JsonConvert.DeserializeObject<Country[]>(json);
 
-            Countries = JsonConvert.DeserializeObject<Country[]>(json)
-                ?.Where(x=>x.HasMap).ToDictionary(x => x.Code, x => x);
+            if(countries == null)
+            {
+                throw new ApplicationException("Could not deserialize country data");
+            }
+            return countries.Where(x => x.HasMap).ToDictionary(x => x.Code, x => x);
         }
 
         public Country PickCountryForPuzzle()

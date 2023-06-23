@@ -9,11 +9,7 @@ namespace WhereInTheWorld.Cgi
 		public static void PlayGame(CgiWrapper cgi)
         {
             var engine = new GameEngine(cgi.ExecutingPath);
-            var state = new GameState
-            {
-                InputGuesses = ParseGuesses(cgi, engine)
-            };
-            engine.Play(state);
+            GameState state = engine.Play(ParseGuesses(cgi, engine));
 
             cgi.Success();
             GameRenderer renderer = new GameRenderer(cgi.Writer, engine, GetGameUrl(cgi));
