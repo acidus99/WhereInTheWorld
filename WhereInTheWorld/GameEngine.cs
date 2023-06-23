@@ -7,25 +7,18 @@ using WhereInTheWorld.Models;
 
 namespace WhereInTheWorld
 {
+    //The only inputs to the game engine are the (validated) guesses the user has made,
+    // and the country data.
     public class GameEngine
     {
         static readonly DateTime InitialPuzzle = new DateTime(2022, 8,1);
 
-        public Dictionary<string, Country> Countries { get; internal set; }
+        readonly CountryData countries;
 
-        /// <summary>
-        /// Where is the game executing? used to load data and graphics
-        /// </summary>
-        public string ExecutionPath { get; private set; }
-
-        public GameEngine(string execPath)
+        public GameEngine(CountryData countryData)
         {
-            ExecutionPath = execPath;
-            Countries = LoadCountryData();
+            countries = countryData;
         }
-
-        public bool IsValidCountry(string code)
-            => Countries.ContainsKey(code.ToUpper());
 
         /// <summary>
         /// Given a set of guess, run the game and return the game state
@@ -37,7 +30,7 @@ namespace WhereInTheWorld
             var state = new GameState
             {
                 InputGuesses = guesses,
-                TargetCountry = PickCountryForPuzzle(),
+                TargetCountry = countries.GetCountryForDay(DateTime.Now),
                 PuzzleNumber = ComputePuzzleNumber()
             };
 
@@ -46,7 +39,7 @@ namespace WhereInTheWorld
             //score the results
             foreach (string guessedCode in state.InputGuesses)
             {
-                var country = Countries[guessedCode];
+                var country = countries[guessedCode];
 
                 GeoCoordinate GuessGeo = new GeoCoordinate(country.Latitude, country.Longitude);
                 bool isCorrect = (guessedCode == state.TargetCountry.Code);
@@ -71,25 +64,6 @@ namespace WhereInTheWorld
         private int ComputePuzzleNumber()
             => Convert.ToInt32(Math.Floor(DateTime.Now.Subtract(InitialPuzzle).TotalDays)) + 1;
 
-        private Dictionary<string, Country> LoadCountryData()
-        {
-            var json = File.ReadAllText(Path.Combine(ExecutionPath, "data/countries.json"));
-            var countries = JsonConvert.DeserializeObject<Country[]>(json);
-
-            if(countries == null)
-            {
-                throw new ApplicationException("Could not deserialize country data");
-            }
-            return countries.Where(x => x.HasMap).ToDictionary(x => x.Code, x => x);
-        }
-
-        public Country PickCountryForPuzzle()
-        {
-            var md5 = MD5.Create();
-            var bytes = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes("hello" + DateTime.Now.DayOfYear.ToString()));
-            var index = (bytes[0] % Countries.Count);
-            return Countries.Values.ToArray()[index];
-        }
     }
 }
 
