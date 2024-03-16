@@ -1,6 +1,6 @@
 ﻿using System;
 using Gemini.Cgi;
-using WhereInTheWorld;
+using WhereInTheWorld.Models;
 
 namespace WhereInTheWorld.Cgi
 {
@@ -10,7 +10,9 @@ namespace WhereInTheWorld.Cgi
         {
             //load up our country data
             CountryData countries = LoadCountryData(cgi.ExecutingPath);
-            var engine = new GameEngine(countries); ;
+            Puzzle puzzle = new Puzzle(countries, DateTime.Now);
+
+            var engine = new GameEngine(countries, puzzle);
 
             //parse and validate the guess from the player
             List<string> guesses = ParseGuesses(cgi, countries);
@@ -29,9 +31,10 @@ namespace WhereInTheWorld.Cgi
         public static void ShowPng(CgiWrapper cgi)
         {
             CountryData countries = LoadCountryData(cgi.ExecutingPath);
-            var country =  countries.GetCountryForDay(DateTime.Now);
+            Puzzle puzzle = new Puzzle(countries, DateTime.Now);
+            
             cgi.Success("image/png");
-            cgi.Out.Write(File.ReadAllBytes($"{GetAssetsPath(cgi.ExecutingPath)}png/{country.Code.ToLower()}.png"));
+            cgi.Out.Write(File.ReadAllBytes($"{GetAssetsPath(cgi.ExecutingPath)}png/{puzzle.TargetCountry.Code.ToLower()}.png"));
         }
 
         static string GetGameUrl(CgiWrapper cgi)

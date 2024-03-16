@@ -11,13 +11,13 @@ namespace WhereInTheWorld
     // and the country data.
     public class GameEngine
     {
-        static readonly DateTime InitialPuzzle = new DateTime(2022, 8,1);
-
         readonly CountryData countries;
+        readonly Puzzle Puzzle;
 
-        public GameEngine(CountryData countryData)
+        public GameEngine(CountryData countryData, Puzzle puzzle)
         {
             countries = countryData;
+            Puzzle = puzzle;
         }
 
         /// <summary>
@@ -30,11 +30,10 @@ namespace WhereInTheWorld
             var state = new GameState
             {
                 InputGuesses = guesses,
-                TargetCountry = countries.GetCountryForDay(DateTime.Now),
-                PuzzleNumber = ComputePuzzleNumber()
+                Puzzle = Puzzle
             };
 
-            var targetGeo = new GeoCoordinate(state.TargetCountry.Latitude, state.TargetCountry.Longitude);
+            var targetGeo = new GeoCoordinate(Puzzle.TargetCountry.Latitude, Puzzle.TargetCountry.Longitude);
 
             //score the results
             foreach (string guessedCode in state.InputGuesses)
@@ -42,7 +41,7 @@ namespace WhereInTheWorld
                 var country = countries[guessedCode];
 
                 GeoCoordinate GuessGeo = new GeoCoordinate(country.Latitude, country.Longitude);
-                bool isCorrect = (guessedCode == state.TargetCountry.Code);
+                bool isCorrect = (guessedCode == Puzzle.TargetCountry.Code);
 
                 state.GuessResults.Add(new Guess
                 {
@@ -60,10 +59,6 @@ namespace WhereInTheWorld
 
             return state;
         }
-
-        private int ComputePuzzleNumber()
-            => Convert.ToInt32(Math.Floor(DateTime.Now.Subtract(InitialPuzzle).TotalDays)) + 1;
-
     }
 }
 

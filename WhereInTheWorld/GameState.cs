@@ -11,10 +11,9 @@ namespace WhereInTheWorld
 
         public required List<string> InputGuesses { get; set; }
 
-        public List<Guess> GuessResults { get; set; } = new List<Guess>();
-        public required Country TargetCountry { get; set; }
+        public required Puzzle Puzzle { get; set; }
 
-        public required int PuzzleNumber { get; set; }
+        public List<Guess> GuessResults { get; set; } = new List<Guess>();
 
         //is the game complete?
         public bool IsComplete
@@ -25,4 +24,3 @@ namespace WhereInTheWorld
             => GuessResults.Count > 0 && GuessResults.Last().IsCorrect;
     }
 }
-

@@ -21,7 +21,7 @@ namespace WhereInTheWorld.Cgi
 
         public void DrawState(GameState state)
         {
-            DrawTitle(state.PuzzleNumber);
+            DrawTitle(state.Puzzle);
             DrawCountry(state);
             DrawGuesses(state.GuessResults);
             if (!state.IsComplete)
@@ -57,22 +57,22 @@ namespace WhereInTheWorld.Cgi
         private void DrawCountry(GameState state)
         {
             Output.WriteLine("``` Geoography you are guessing");
-            Output.Write(AsciiMapForCountry(state.TargetCountry));
+            Output.Write(AsciiMapForCountry(state.Puzzle.TargetCountry));
             Output.WriteLine("```");
             Output.WriteLine($"=> {RouteOptions.PngUrl} See high resolution image");
             if(state.IsDebug)
             {
-                Output.WriteLine($"Debug: Answer is {state.TargetCountry.Name}");
+                Output.WriteLine($"Debug: Answer is {state.Puzzle.TargetCountry.Name}");
             }
             Output.WriteLine();
         }
 
-        private void DrawTitle(int puzzleNum)
+        private void DrawTitle(Puzzle puzzle)
         {
             Output.WriteLine("# 🗺 Where in the World?");
             Output.WriteLine($"=> {RouteOptions.HelpUrl} How to play");
             Output.WriteLine($"=> {RouteOptions.FaqUrl} FAQ");
-            Output.WriteLine($"## Puzzle #{puzzleNum} - {DateTime.Today.ToString("yyyy-MM-dd")}");
+            Output.WriteLine($"## Puzzle #{puzzle.Number} - {puzzle.Date.ToString("yyyy-MM-dd")}");
         }
 
         private void DrawGuesses(List<Guess> guesses)
@@ -82,7 +82,7 @@ namespace WhereInTheWorld.Cgi
             {
                 counter++;
                 Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
-                    $"| {guess.Distance} km | {BearingToEmoji(guess)} | {PercentAway(guess).ToString("P0")}"); 
+                    $"• {guess.Distance} km • {BearingToEmoji(guess)} • {PercentAway(guess).ToString("P0")}"); 
             }
             Output.WriteLine();
         }
@@ -110,7 +110,7 @@ namespace WhereInTheWorld.Cgi
         private void DrawWinScreen(GameState state)
         {
             Output.WriteLine($"## You Win!");
-            Output.WriteLine($"Congratulations! You correctly picked {state.TargetCountry.Name}!");
+            Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
             Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
             Output.WriteLine();
         }
@@ -118,7 +118,7 @@ namespace WhereInTheWorld.Cgi
         private void DrawLoseScreen(GameState state)
         {
             Output.WriteLine($"## Bummer");
-            Output.WriteLine($"Nice try, but the country was {state.TargetCountry.Name}.");
+            Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
             Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
             Output.WriteLine();
         }
@@ -128,7 +128,7 @@ namespace WhereInTheWorld.Cgi
             Output.WriteLine("## Share Game Summary");
             Output.WriteLine("Copy and share the summary of your game below on Station");
             Output.WriteLine("```game summary for copying");
-            Output.WriteLine($"Where In The World? • Puzzle #{state.PuzzleNumber} • {DateTime.Today.ToString("yyyy-MM-dd")}");
+            Output.WriteLine($"Where In The World? • Puzzle #{state.Puzzle.Number} • {state.Puzzle.Date.ToString("yyyy-MM-dd")}");
             foreach (var guess in state.GuessResults)
             {
                 Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
