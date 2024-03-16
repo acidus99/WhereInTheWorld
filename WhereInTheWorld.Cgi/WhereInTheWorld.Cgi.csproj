@@ -508,6 +508,7 @@
     <None Remove="static\help.gmi" />
     <None Remove="static\index.gmi" />
     <None Remove="static\faq.gmi" />
+    <None Remove="static\changelog.gmi" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
@@ -1974,6 +1975,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="static\faq.gmi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="static\changes.gmi">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
