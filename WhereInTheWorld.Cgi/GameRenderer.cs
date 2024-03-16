@@ -37,6 +37,7 @@ public class GameRenderer
                 DrawLoseScreen(state);
             }
             DrawSummary(state);
+            DrawPuzzleLinks(state.Puzzle);
         }
     }
 
@@ -58,7 +59,7 @@ public class GameRenderer
         Output.Write(AsciiMapForCountry(state.Puzzle.TargetCountry));
         Output.WriteLine("```");
         Output.WriteLine($"=> {RouteOptions.PngUrl(state.Puzzle.Number)} See high resolution image");
-        if(state.IsDebug)
+        if (state.IsDebug)
         {
             Output.WriteLine($"Debug: Answer is {state.Puzzle.TargetCountry.Name}");
         }
@@ -76,11 +77,11 @@ public class GameRenderer
     private void DrawGuesses(List<Guess> guesses)
     {
         int counter = 0;
-        foreach(var guess in guesses)
+        foreach (var guess in guesses)
         {
             counter++;
             Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
-                $"• {guess.Distance} km • {BearingToEmoji(guess)} • {PercentAway(guess).ToString("P0")}"); 
+                $"• {guess.Distance} km • {BearingToEmoji(guess)} • {PercentAway(guess).ToString("P0")}");
         }
         Output.WriteLine();
     }
@@ -109,7 +110,6 @@ public class GameRenderer
     {
         Output.WriteLine($"## You Win!");
         Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
-        Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
         Output.WriteLine();
     }
 
@@ -117,7 +117,27 @@ public class GameRenderer
     {
         Output.WriteLine($"## Bummer");
         Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
-        Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+        Output.WriteLine();
+    }
+
+    private void DrawPuzzleLinks(Puzzle puzzle)
+    {
+        int? nextNumber = Puzzle.IsValidPuzzle(puzzle.Number + 1) ? puzzle.Number + 1 : null;
+        int? prevNumber = Puzzle.IsValidPuzzle(puzzle.Number - 1) ? puzzle.Number - 1 : null;
+
+        if (nextNumber.HasValue)
+        {
+            Output.WriteLine($"=> {RouteOptions.PlayUrl(nextNumber.Value)} Play next puzzle #{nextNumber.Value}");
+        }
+        else
+        {
+            Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+        }
+
+        if (prevNumber.HasValue)
+        {
+            Output.WriteLine($"=> {RouteOptions.PlayUrl(prevNumber.Value)} Play previous puzzle #{prevNumber.Value}");
+        }
         Output.WriteLine();
     }
 
@@ -145,10 +165,12 @@ public class GameRenderer
         else if (percent < .4)
         {
             return "✅❌❌❌❌";
-        } else if (percent < .6)
+        }
+        else if (percent < .6)
         {
             return "✅✅❌❌❌";
-        } else if (percent < .8)
+        }
+        else if (percent < .8)
         {
             return "✅✅✅❌❌";
         }
@@ -165,7 +187,7 @@ public class GameRenderer
 
     private string BearingToEmoji(Guess guess)
     {
-        if(guess.IsCorrect)
+        if (guess.IsCorrect)
         {
             return "🎉";
         }
@@ -204,7 +226,7 @@ public class GameRenderer
     {
         var precise = Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
         //don't allow lower numbers to be 0%
-        if(precise <= 0.009)
+        if (precise <= 0.009)
         {
             return 0.01;
         }

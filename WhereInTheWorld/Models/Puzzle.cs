@@ -18,6 +18,17 @@ public class Puzzle
     public static int DateToNumber(DateTime date)
       => Convert.ToInt32(Math.Floor(date.Subtract(InitialPuzzle).TotalDays)) + 1;
 
+    public static bool IsValidPuzzle(int puzzleNumber)
+    {
+        if (puzzleNumber > 0)
+        {
+            var date = NumberToDate(puzzleNumber);
+            //only allow puzzles for dates not in the future
+            return (date <= DateTime.UtcNow.Date);
+        }
+        return false;
+    }
+
     public static DateTime NumberToDate(int puzzleNumber)
         => InitialPuzzle.AddDays(puzzleNumber - 1);
 }

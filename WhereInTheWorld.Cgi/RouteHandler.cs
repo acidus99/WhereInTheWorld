@@ -37,6 +37,33 @@ public static class RouteHandler
         Footer(cgi);
     }
 
+    public static void ShowArchive(CgiWrapper cgi)
+    {
+        cgi.Success();
+        cgi.Writer.WriteLine("# 🗺 Where In The World?");
+        cgi.Writer.WriteLine("Play previous puzzles.");
+        DateTime current = DateTime.UtcNow.Date;
+        DateTime previous = DateTime.MaxValue;
+        while (current >= Puzzle.InitialPuzzle)
+        {
+            int puzzleNumber = Puzzle.DateToNumber(current);
+
+            if(current.Year != previous.Year)
+            {
+                cgi.Writer.WriteLine($"## {current.Year}");
+            }
+            if (current.Month != previous.Month)
+            {
+                cgi.Writer.WriteLine($"### {current.ToString("MMMM")}");
+            }
+
+            cgi.Writer.WriteLine($"=> {RouteOptions.PlayUrl(puzzleNumber)} Puzzle #{puzzleNumber} • {current.ToString("yyyy-MM-dd")}");
+
+            previous = current;
+            current = current.AddDays(-1).Date;
+        }
+    }
+
     public static void ShowPng(CgiWrapper cgi)
     {
         CountryData countries = LoadCountryData(cgi.ExecutingPath);

@@ -11,7 +11,7 @@ I wondered if I could make a port of the game to Gemini. Where In The World is t
 A new puzzle is available every day at 0:00 GMT. New puzzles generate automatically every day. The same puzzle is used for everyone, every day, so you can share and compete with friends if you'd like.
 
 ## Where can I play previous puzzles?
-Right now, you can't.
+You sure can. There is a link on the home page to play any previous puzzle.
 
 ## How many countries and territories are there?
 242

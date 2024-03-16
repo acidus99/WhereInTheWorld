@@ -2,6 +2,7 @@
 Where In The World is a geography puzzle game.
 
 => /cgi-bin/witw.cgi/play Play Today's Puzzle
+=> /cgi-bin/witw.cgi/past Play Past Puzzles
 => /cgi-bin/witw.cgi/help.gmi How to Play
 => /cgi-bin/witw.cgi/faq.gmi FAQ
 
