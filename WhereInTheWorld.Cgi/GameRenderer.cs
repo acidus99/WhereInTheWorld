@@ -24,7 +24,7 @@ public class GameRenderer
         DrawGuesses(state.GuessResults);
         if (!state.IsComplete)
         {
-            DrawInputOptions(state.InputGuesses);
+            DrawInputOptions(state);
         }
         else
         {
@@ -57,7 +57,7 @@ public class GameRenderer
         Output.WriteLine("``` Geoography you are guessing");
         Output.Write(AsciiMapForCountry(state.Puzzle.TargetCountry));
         Output.WriteLine("```");
-        Output.WriteLine($"=> {RouteOptions.PngUrl} See high resolution image");
+        Output.WriteLine($"=> {RouteOptions.PngUrl(state.Puzzle.Number)} See high resolution image");
         if(state.IsDebug)
         {
             Output.WriteLine($"Debug: Answer is {state.Puzzle.TargetCountry.Name}");
@@ -85,15 +85,15 @@ public class GameRenderer
         Output.WriteLine();
     }
 
-    private void DrawInputOptions(List<string> inputGuesses)
+    private void DrawInputOptions(GameState state)
     {
         Output.WriteLine("## Guess a Country");
         string previous = "A";
 
-        string prevInput = String.Join(',', inputGuesses);
+        string prevInput = String.Join(',', state.InputGuesses);
 
         foreach (var country in Countries.Countries
-            .Where(x => !inputGuesses.Contains(x.Code))
+            .Where(x => !state.InputGuesses.Contains(x.Code))
             .OrderBy(x => x.Name))
         {
             if (country.Name[0] != previous[0])
@@ -101,7 +101,7 @@ public class GameRenderer
                 Output.WriteLine();
             }
             previous = country.Name;
-            Output.WriteLine($"=> {RouteOptions.PlayUrl}?{prevInput},{country.Code} {country.Name}");
+            Output.WriteLine($"=> {RouteOptions.PlayUrl(state.Puzzle.Number)}?{prevInput},{country.Code} {country.Name}");
         }
     }
 

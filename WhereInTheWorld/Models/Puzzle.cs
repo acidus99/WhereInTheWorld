@@ -8,13 +8,15 @@ public class Puzzle
     public int Number { get; set; }
     public DateTime Date { get; set; }
 
-    public Puzzle(CountryData countries, DateTime date)
+    public Puzzle(CountryData countries, int puzzleNumber)
     {
-        Date = date;
-        Number = ComputeNumber(date);
-        TargetCountry = countries.GetCountryForDay(date);
+        Number = puzzleNumber;
+        Date = NumberToDate(puzzleNumber);
+        TargetCountry = countries.GetCountryForDay(Date);
     }
 
-    private int ComputeNumber(DateTime date)
-        => Convert.ToInt32(Math.Floor(date.Subtract(InitialPuzzle).TotalDays)) + 1;
+    public static DateTime NumberToDate(int puzzleNumber)
+    {
+        return InitialPuzzle.AddDays(puzzleNumber - 1);
+    }
 }

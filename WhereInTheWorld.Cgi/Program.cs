@@ -8,7 +8,8 @@ class Program
     {
         var router = new CgiRouter();
         router.SetStaticRoot("static/");
-        router.OnRequest("/play", RouteHandler.PlayGame);
+        router.OnRequest("/play", RouteHandler.PlayToday);
+        router.OnRequest("/game/", RouteHandler.PlayGame);
         router.OnRequest("/png", RouteHandler.ShowPng);
         router.ProcessRequest();
     }
