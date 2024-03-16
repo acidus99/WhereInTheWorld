@@ -1,217 +1,214 @@
-﻿using System;
+﻿using WhereInTheWorld.Models;
 
-using WhereInTheWorld.Models;
+namespace WhereInTheWorld.Cgi;
 
-namespace WhereInTheWorld.Cgi
+public class GameRenderer
 {
-    public class GameRenderer
+    readonly CountryData Countries;
+    readonly TextWriter Output;
+    readonly string AssetsPath;
+    readonly string PlayUrl;
+
+    public GameRenderer(TextWriter output, CountryData countries, string assetsPath, string url)
     {
-        readonly CountryData Countries;
-        readonly TextWriter Output;
-        readonly string AssetsPath;
-        readonly string PlayUrl;
+        Output = output;
+        Countries = countries;
+        AssetsPath = assetsPath;
+        PlayUrl = url;
+    }
 
-        public GameRenderer(TextWriter output, CountryData countries, string assetsPath, string url)
+    public void DrawState(GameState state)
+    {
+        DrawTitle(state.Puzzle);
+        DrawCountry(state);
+        DrawGuesses(state.GuessResults);
+        if (!state.IsComplete)
         {
-            Output = output;
-            Countries = countries;
-            AssetsPath = assetsPath;
-            PlayUrl = url;
+            DrawInputOptions(state.InputGuesses);
         }
-
-        public void DrawState(GameState state)
+        else
         {
-            DrawTitle(state.Puzzle);
-            DrawCountry(state);
-            DrawGuesses(state.GuessResults);
-            if (!state.IsComplete)
+            if (state.IsWin)
             {
-                DrawInputOptions(state.InputGuesses);
+                DrawWinScreen(state);
             }
             else
             {
-                if (state.IsWin)
-                {
-                    DrawWinScreen(state);
-                }
-                else
-                {
-                    DrawLoseScreen(state);
-                }
-                DrawSummary(state);
+                DrawLoseScreen(state);
             }
+            DrawSummary(state);
         }
+    }
 
-        private string AsciiMapForCountry(Country country)
+    private string AsciiMapForCountry(Country country)
+    {
+        try
         {
-            try
-            {
-                return File.ReadAllText($"{AssetsPath}{country.Code.ToLower()}.60.txt");
-            }
-            catch (Exception)
-            {
-                return "";
-            }
+            return File.ReadAllText($"{AssetsPath}{country.Code.ToLower()}.60.txt");
         }
-
-        private void DrawCountry(GameState state)
+        catch (Exception)
         {
-            Output.WriteLine("``` Geoography you are guessing");
-            Output.Write(AsciiMapForCountry(state.Puzzle.TargetCountry));
-            Output.WriteLine("```");
-            Output.WriteLine($"=> {RouteOptions.PngUrl} See high resolution image");
-            if(state.IsDebug)
-            {
-                Output.WriteLine($"Debug: Answer is {state.Puzzle.TargetCountry.Name}");
-            }
-            Output.WriteLine();
+            return "";
         }
+    }
 
-        private void DrawTitle(Puzzle puzzle)
+    private void DrawCountry(GameState state)
+    {
+        Output.WriteLine("``` Geoography you are guessing");
+        Output.Write(AsciiMapForCountry(state.Puzzle.TargetCountry));
+        Output.WriteLine("```");
+        Output.WriteLine($"=> {RouteOptions.PngUrl} See high resolution image");
+        if(state.IsDebug)
         {
-            Output.WriteLine("# 🗺 Where in the World?");
-            Output.WriteLine($"=> {RouteOptions.HelpUrl} How to play");
-            Output.WriteLine($"=> {RouteOptions.FaqUrl} FAQ");
-            Output.WriteLine($"## Puzzle #{puzzle.Number} - {puzzle.Date.ToString("yyyy-MM-dd")}");
+            Output.WriteLine($"Debug: Answer is {state.Puzzle.TargetCountry.Name}");
         }
+        Output.WriteLine();
+    }
 
-        private void DrawGuesses(List<Guess> guesses)
+    private void DrawTitle(Puzzle puzzle)
+    {
+        Output.WriteLine("# 🗺 Where in the World?");
+        Output.WriteLine($"=> {RouteOptions.HelpUrl} How to play");
+        Output.WriteLine($"=> {RouteOptions.FaqUrl} FAQ");
+        Output.WriteLine($"## Puzzle #{puzzle.Number} - {puzzle.Date.ToString("yyyy-MM-dd")}");
+    }
+
+    private void DrawGuesses(List<Guess> guesses)
+    {
+        int counter = 0;
+        foreach(var guess in guesses)
         {
-            int counter = 0;
-            foreach(var guess in guesses)
-            {
-                counter++;
-                Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
-                    $"• {guess.Distance} km • {BearingToEmoji(guess)} • {PercentAway(guess).ToString("P0")}"); 
-            }
-            Output.WriteLine();
+            counter++;
+            Output.WriteLine($"* Guess {counter}. {guess.Country.Name} " +
+                $"• {guess.Distance} km • {BearingToEmoji(guess)} • {PercentAway(guess).ToString("P0")}"); 
         }
+        Output.WriteLine();
+    }
 
-        private void DrawInputOptions(List<string> inputGuesses)
+    private void DrawInputOptions(List<string> inputGuesses)
+    {
+        Output.WriteLine("## Guess a Country");
+        string previous = "A";
+
+        string prevInput = String.Join(',', inputGuesses);
+
+        foreach (var country in Countries.Countries
+            .Where(x => !inputGuesses.Contains(x.Code))
+            .OrderBy(x => x.Name))
         {
-            Output.WriteLine("## Guess a Country");
-            string previous = "A";
-
-            string prevInput = String.Join(',', inputGuesses);
-
-            foreach (var country in Countries.Countries
-                .Where(x => !inputGuesses.Contains(x.Code))
-                .OrderBy(x => x.Name))
+            if (country.Name[0] != previous[0])
             {
-                if (country.Name[0] != previous[0])
-                {
-                    Output.WriteLine();
-                }
-                previous = country.Name;
-                Output.WriteLine($"=> {RouteOptions.PlayUrl}?{prevInput},{country.Code} {country.Name}");
+                Output.WriteLine();
             }
+            previous = country.Name;
+            Output.WriteLine($"=> {RouteOptions.PlayUrl}?{prevInput},{country.Code} {country.Name}");
         }
+    }
 
-        private void DrawWinScreen(GameState state)
+    private void DrawWinScreen(GameState state)
+    {
+        Output.WriteLine($"## You Win!");
+        Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
+        Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+        Output.WriteLine();
+    }
+
+    private void DrawLoseScreen(GameState state)
+    {
+        Output.WriteLine($"## Bummer");
+        Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
+        Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
+        Output.WriteLine();
+    }
+
+    private void DrawSummary(GameState state)
+    {
+        Output.WriteLine("## Share Game Summary");
+        Output.WriteLine("Copy and share the summary of your game below on Station");
+        Output.WriteLine("```game summary for copying");
+        Output.WriteLine($"Where In The World? • Puzzle #{state.Puzzle.Number} • {state.Puzzle.Date.ToString("yyyy-MM-dd")}");
+        foreach (var guess in state.GuessResults)
         {
-            Output.WriteLine($"## You Win!");
-            Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
-            Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
-            Output.WriteLine();
+            Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
         }
+        Output.WriteLine(PlayUrl);
+        Output.WriteLine("```");
+    }
 
-        private void DrawLoseScreen(GameState state)
+    private string ClosenessGraph(Guess guess)
+    {
+        double percent = PercentAway(guess);
+        if (percent < .2)
         {
-            Output.WriteLine($"## Bummer");
-            Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
-            Output.WriteLine("Come back tomorrow for another Where In The World puzzle!");
-            Output.WriteLine();
+            return "❌❌❌❌❌";
         }
-
-        private void DrawSummary(GameState state)
+        else if (percent < .4)
         {
-            Output.WriteLine("## Share Game Summary");
-            Output.WriteLine("Copy and share the summary of your game below on Station");
-            Output.WriteLine("```game summary for copying");
-            Output.WriteLine($"Where In The World? • Puzzle #{state.Puzzle.Number} • {state.Puzzle.Date.ToString("yyyy-MM-dd")}");
-            foreach (var guess in state.GuessResults)
-            {
-                Output.WriteLine($"{ClosenessGraph(guess)}{BearingToEmoji(guess)}");
-            }
-            Output.WriteLine(PlayUrl);
-            Output.WriteLine("```");
-        }
-
-        private string ClosenessGraph(Guess guess)
+            return "✅❌❌❌❌";
+        } else if (percent < .6)
         {
-            double percent = PercentAway(guess);
-            if (percent < .2)
-            {
-                return "❌❌❌❌❌";
-            }
-            else if (percent < .4)
-            {
-                return "✅❌❌❌❌";
-            } else if (percent < .6)
-            {
-                return "✅✅❌❌❌";
-            } else if (percent < .8)
-            {
-                return "✅✅✅❌❌";
-            }
-            else if (percent < .9)
-            {
-                return "✅✅✅✅❌";
-            }
-            else if (percent < 1)
-            {
-                return "✅✅✅✅🤏";
-            }
-            return "✅✅✅✅✅";
-        }
-
-        private string BearingToEmoji(Guess guess)
+            return "✅✅❌❌❌";
+        } else if (percent < .8)
         {
-            if(guess.IsCorrect)
-            {
-                return "🎉";
-            }
-
-            //normalize bearing into 45 degree points;
-            int bearing = Convert.ToInt32(Math.Round(guess.Bearing / 45));
-            switch (bearing)
-            {
-                case 1:
-                    return "↗️";
-
-                case 2:
-                    return "➡️";
-
-                case 3:
-                    return "↘️";
-
-                case 4:
-                    return "⬇️";
-
-                case 5:
-                    return "↙️";
-
-                case 6:
-                    return "⬅️";
-
-                case 7:
-                    return "↖️";
-
-                default: //0 and 8
-                    return "⬆️";
-            }
+            return "✅✅✅❌❌";
         }
-
-        private double PercentAway(Guess guess)
+        else if (percent < .9)
         {
-            var precise = Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
-            //don't allow lower numbers to be 0%
-            if(precise <= 0.009)
-            {
-                return 0.01;
-            }
-            //truncate to make percentage whole numbers. This prevents "rounding up" by later string functions
-            return Math.Truncate(precise * 100) / 100;
+            return "✅✅✅✅❌";
         }
+        else if (percent < 1)
+        {
+            return "✅✅✅✅🤏";
+        }
+        return "✅✅✅✅✅";
+    }
+
+    private string BearingToEmoji(Guess guess)
+    {
+        if(guess.IsCorrect)
+        {
+            return "🎉";
+        }
+
+        //normalize bearing into 45 degree points;
+        int bearing = Convert.ToInt32(Math.Round(guess.Bearing / 45));
+        switch (bearing)
+        {
+            case 1:
+                return "↗️";
+
+            case 2:
+                return "➡️";
+
+            case 3:
+                return "↘️";
+
+            case 4:
+                return "⬇️";
+
+            case 5:
+                return "↙️";
+
+            case 6:
+                return "⬅️";
+
+            case 7:
+                return "↖️";
+
+            default: //0 and 8
+                return "⬆️";
+        }
+    }
+
+    private double PercentAway(Guess guess)
+    {
+        var precise = Convert.ToDouble(1f - (Convert.ToDouble(guess.Distance) / Convert.ToDouble(20000)));
+        //don't allow lower numbers to be 0%
+        if(precise <= 0.009)
+        {
+            return 0.01;
+        }
+        //truncate to make percentage whole numbers. This prevents "rounding up" by later string functions
+        return Math.Truncate(precise * 100) / 100;
     }
 }
