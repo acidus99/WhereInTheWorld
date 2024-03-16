@@ -15,8 +15,9 @@ public class Puzzle
         TargetCountry = countries.GetCountryForDay(Date);
     }
 
+    public static int DateToNumber(DateTime date)
+      => Convert.ToInt32(Math.Floor(date.Subtract(InitialPuzzle).TotalDays)) + 1;
+
     public static DateTime NumberToDate(int puzzleNumber)
-    {
-        return InitialPuzzle.AddDays(puzzleNumber - 1);
-    }
+        => InitialPuzzle.AddDays(puzzleNumber - 1);
 }
