@@ -1,26 +1,22 @@
-﻿using System;
+﻿using WhereInTheWorld.Models;
 
+namespace WhereInTheWorld;
 
-using WhereInTheWorld.Models;
-
-namespace WhereInTheWorld
+public class GameState
 {
-    public class GameState
-    {
-        public bool IsDebug { get; set; } = false;
+    public bool IsDebug { get; set; } = false;
 
-        public required List<string> InputGuesses { get; set; }
+    public required List<string> InputGuesses { get; set; }
 
-        public required Puzzle Puzzle { get; set; }
+    public required Puzzle Puzzle { get; set; }
 
-        public List<Guess> GuessResults { get; set; } = new List<Guess>();
+    public List<Guess> GuessResults { get; set; } = new List<Guess>();
 
-        //is the game complete?
-        public bool IsComplete
-            => IsWin || GuessResults.Count == 6;
+    //is the game complete?
+    public bool IsComplete
+        => IsWin || GuessResults.Count == 6;
 
-        //did they win the game?
-        public bool IsWin
-            => GuessResults.Count > 0 && GuessResults.Last().IsCorrect;
-    }
+    //did they win the game?
+    public bool IsWin
+        => GuessResults.Count > 0 && GuessResults.Last().IsCorrect;
 }
