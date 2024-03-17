@@ -12,7 +12,7 @@ public class Puzzle
     {
         Number = puzzleNumber;
         Date = NumberToDate(puzzleNumber);
-        TargetCountry = countries.GetCountryForDay(Date);
+        TargetCountry = countries.GetCountryForPuzzle(Date, Number);
     }
 
     public static int DateToNumber(DateTime date)
