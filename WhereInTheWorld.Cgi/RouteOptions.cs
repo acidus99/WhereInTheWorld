@@ -3,7 +3,8 @@
 public static class RouteOptions
 {
     private const string BaseCgiPath = "/cgi-bin/witw.cgi";
-    
+
+    public static string GameHome => BaseCgiPath;
     public const string HelpUrl = BaseCgiPath + "/help.gmi";
     public const string FaqUrl = BaseCgiPath + "/faq.gmi";
 

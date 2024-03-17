@@ -19,7 +19,20 @@ public static class RouteHandler
     {
         //load up our country data
         CountryData countries = LoadCountryData(cgi.ExecutingPath);
-        Puzzle puzzle = ParsePuzzle(cgi, countries);
+        Puzzle puzzle;
+
+        try
+        {
+            puzzle = ParsePuzzle(cgi, countries);
+        }
+        catch (ApplicationException)
+        {
+            //if we couldn't parse the puzzle, go home.
+            //primary this catches people who are playing a game and use the "go up a folder" function of their Gemini client
+            //to get them back to the main page
+            cgi.Redirect(RouteOptions.GameHome);
+            return;
+        }
 
         var engine = new GameEngine(countries, puzzle);
 
