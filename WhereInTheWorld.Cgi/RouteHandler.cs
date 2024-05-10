@@ -52,9 +52,19 @@ public static class RouteHandler
 
     public static void ShowArchive(CgiWrapper cgi)
     {
+        bool showCountryName = cgi.IsLocalHost;
+
+        //load up our country data if needed
+        CountryData? countries = null;
+        if(showCountryName)
+        {
+            countries = LoadCountryData(cgi.ExecutingPath);
+        }
+
         cgi.Success();
         cgi.Writer.WriteLine("# 🗺 Where In The World?");
         cgi.Writer.WriteLine("Play previous puzzles.");
+
         DateTime current = DateTime.UtcNow.Date;
         DateTime previous = DateTime.MaxValue;
         while (current >= Puzzle.InitialPuzzle)
@@ -70,7 +80,16 @@ public static class RouteHandler
                 cgi.Writer.WriteLine($"### {current.ToString("MMMM")}");
             }
 
-            cgi.Writer.WriteLine($"=> {RouteOptions.PlayUrl(puzzleNumber)} Puzzle #{puzzleNumber} • {current.ToString("yyyy-MM-dd")}");
+            //if we are running on localhost, show the name of the country so I can check things
+            if(showCountryName)
+            {
+                Puzzle puzzle = new Puzzle(countries!, puzzleNumber);
+                cgi.Writer.WriteLine($"=> {RouteOptions.PlayUrl(puzzleNumber)} Puzzle #{puzzleNumber} • {current.ToString("yyyy-MM-dd")} • {puzzle.TargetCountry.Name}");
+            }
+            else
+            {
+                cgi.Writer.WriteLine($"=> {RouteOptions.PlayUrl(puzzleNumber)} Puzzle #{puzzleNumber} • {current.ToString("yyyy-MM-dd")}");
+            }
 
             previous = current;
             current = current.AddDays(-1).Date;
