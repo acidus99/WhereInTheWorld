@@ -1,4 +1,5 @@
 ﻿using WhereInTheWorld.Models;
+using System.Web;
 
 namespace WhereInTheWorld.Cgi;
 
@@ -69,8 +70,6 @@ public class GameRenderer
     private void DrawTitle(Puzzle puzzle)
     {
         Output.WriteLine("# 🗺 Where in the World?");
-        Output.WriteLine($"=> {RouteOptions.HelpUrl} How to play");
-        Output.WriteLine($"=> {RouteOptions.FaqUrl} FAQ");
         Output.WriteLine($"## Puzzle #{puzzle.Number} - {puzzle.Date.ToString("yyyy-MM-dd")}");
     }
 
@@ -110,6 +109,7 @@ public class GameRenderer
     {
         Output.WriteLine($"## You Win!");
         Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
+        Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
         Output.WriteLine();
     }
 
@@ -117,6 +117,7 @@ public class GameRenderer
     {
         Output.WriteLine($"## Bummer");
         Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
+        Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
         Output.WriteLine();
     }
 
