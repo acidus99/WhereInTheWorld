@@ -9,6 +9,8 @@ public class CountryData
     //After this epoc, we use a different algorithm to determine the country to use for a day's puzzle.
     static readonly DateTime SecondAlgorithmEpoc = new DateTime(2024, 3, 16);
 
+    public const string GiveUpCode = "XX"; 
+    
     Dictionary<string, Country> _countries;
 
     public CountryData(string filename)
@@ -67,7 +69,9 @@ public class CountryData
         return _countries.Values.ToArray()[index];
     }
 
-
+    public bool IsGiveup(string code)
+        => code.ToUpper() == GiveUpCode;
+    
     public bool IsValidCountry(string code)
         => _countries.ContainsKey(code.ToUpper());
 }

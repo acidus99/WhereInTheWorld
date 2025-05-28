@@ -32,15 +32,19 @@ There are two reasons for this::
 ## Will you tell me the answer to today's puzzle?
 No.
 
-## I have feedback
+## I have feedback.
 Is your feedback a subtle way to ask me the answer to today's puzzle?
 
-## No
+## No.
 Cool, then email me
 
-## How is the country for each day's puzzle selected? I swear I'm seeing a pattern
+## How is the country for each day's puzzle selected? I swear I'm seeing a pattern!
 
 For a time there was a pattern, though I doubt anyone noticed. Originally, I used a simple algorithm that used the day of the year as a seed to randomly pick a country. Unfortunately this means that the puzzle for 2023-01-01 is the same as 2024-01-01. Essentially the same countries were used in the same order, each year. This was fixed in 2024-03-17. To allow people to see what previous games looked like, games before March 17th 2024 use this older algorithm. Going forward there are no repeating patterns to the puzzles.
+
+## This is too hard.
+
+Some countries, especially small island nations in the South Pacific, can be tricky. There is a "I quit" option at that bottom of the list of countries. Selecting this forfeits the game and displays the answer.
 
 --
 => mailto:acidus@gemi.dev Made with 🌎 and ❤️ by Acidus

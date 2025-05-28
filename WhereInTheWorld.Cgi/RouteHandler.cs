@@ -114,7 +114,7 @@ public static class RouteHandler
         {
             return cgi.Query
                 .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-                .Where(x => countries.IsValidCountry(x))
+                .Where(x => countries.IsValidCountry(x) || countries.IsGiveup(x))
                 .Select(x => x.ToUpper())
                 .Take(6)
                 .ToList();

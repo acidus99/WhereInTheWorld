@@ -32,12 +32,18 @@ public class GameRenderer
             if (state.IsWin)
             {
                 DrawWinScreen(state);
+                DrawSummary(state);
+            }
+            else if (state.IsForfeit)
+            {
+                DrawForfeitScreen(state);
             }
             else
             {
                 DrawLoseScreen(state);
+                DrawSummary(state);
             }
-            DrawSummary(state);
+            
             DrawPuzzleLinks(state.Puzzle);
         }
     }
@@ -96,6 +102,7 @@ public class GameRenderer
             .Where(x => !state.InputGuesses.Contains(x.Code))
             .OrderBy(x => x.Name))
         {
+            //groups countries that start with the same letter
             if (country.Name[0] != previous[0])
             {
                 Output.WriteLine();
@@ -103,6 +110,9 @@ public class GameRenderer
             previous = country.Name;
             Output.WriteLine($"=> {RouteOptions.PlayUrl(state.Puzzle.Number)}?{prevInput},{country.Code} {country.Name}");
         }
+        
+        Output.WriteLine();
+        Output.WriteLine($"=> {RouteOptions.PlayUrl(state.Puzzle.Number)}?{prevInput},{CountryData.GiveUpCode} 😭 I give up!");
     }
 
     private void DrawWinScreen(GameState state)
@@ -121,6 +131,14 @@ public class GameRenderer
         Output.WriteLine();
     }
 
+    private void DrawForfeitScreen(GameState state)
+    {
+        Output.WriteLine($"## You Forfeit!");
+        Output.WriteLine($"I guess when the country is {state.Puzzle.TargetCountry.Name}, the only winning move is not to play!");
+        Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
+        Output.WriteLine();
+    }
+    
     private void DrawPuzzleLinks(Puzzle puzzle)
     {
         int? nextNumber = Puzzle.IsValidPuzzle(puzzle.Number + 1) ? puzzle.Number + 1 : null;

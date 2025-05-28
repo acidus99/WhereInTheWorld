@@ -34,6 +34,13 @@ public class GameEngine
         //score the results
         foreach (string guessedCode in state.InputGuesses)
         {
+            if (countries.IsGiveup(guessedCode))
+            {
+                state.IsForfeit = true;
+                state.InputGuesses.Remove(guessedCode);
+                break;
+            }
+            
             var country = countries[guessedCode];
 
             GeoCoordinate GuessGeo = new GeoCoordinate(country.Latitude, country.Longitude);
