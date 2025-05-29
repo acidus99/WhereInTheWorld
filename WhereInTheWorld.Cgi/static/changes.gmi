@@ -1,5 +1,8 @@
 # Changelog
 
+* 2023-05-29: Bug fix: Multiple typos.
+* 2025-05-28: Feature: Added ability to quickly forfeit game at end of country list.
+* 2024-11-04: Feature: Added link to country's Wikipedia entry on Gemipedia when game is over.
 * 2024-03-16: Feature: Changed country choosing algorithm so there will not be repeating patterns each year.
 * 2024-03-16: Feature: Now you can play previous puzzles!
 * 2024-03-16: Feature: Changed the URL for high resolution image link to have a ".png" extension, which makes many clients display it as an image link.
@@ -9,6 +12,6 @@
 * 2023-01-11: Bug fix: Removed Byte Order Mark (BOM) from index, faq, and help pages which caused rendering issues with some clients.
 * 2022-12-13: Bug fix: Fixed typos/formatting in FAQ.
 * 2022-09-09: Bug fix: Fixed bug where very close distances displayed as 100%.
-* 2022-08-19: Bug fix: Fixed but with clients that don't handle relative URLs with just a query string.
+* 2022-08-19: Bug fix: Fixed bug with clients that don't handle relative URLs with just a query string.
 * 2022-08-15: Feature: Added pinch Emoji 🤏 to game summary to show when you were within 10% distance.
 * 2022-08-04: Released to the world!
