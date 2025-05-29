@@ -1,6 +1,6 @@
 # Changelog
 
-* 2023-05-29: Bug fix: Multiple typos.
+* 2025-05-29: Bug fix: Multiple typos.
 * 2025-05-28: Feature: Added ability to quickly forfeit game at end of country list.
 * 2024-11-04: Feature: Added link to country's Wikipedia entry on Gemipedia when game is over.
 * 2024-03-16: Feature: Changed country choosing algorithm so there will not be repeating patterns each year.
