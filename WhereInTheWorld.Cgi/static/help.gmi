@@ -6,7 +6,7 @@ Every day, a new country or territory is selected. You have 6 guesses to name it
 
 ## How do I play?
 
-At the top of the screen there is an ASCII art image of the country, as well as a link a higher resolution image, like this:
+At the top of the screen there is an ASCII art image of the country, as well as a link to a higher resolution image, like this:
 
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

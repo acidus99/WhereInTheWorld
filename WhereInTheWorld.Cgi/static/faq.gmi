@@ -1,11 +1,11 @@
 # 🗺 Help - Where In The World?
 
 ## Why did you make this?
-I suck at word games like scrabble, crosswords, and the like. So Gemini native games like Spellbinding, while cool, are not appealing to me. I am however good at geography, and have been playing Worldle with friends for a few months:
+I suck at word games like Scrabble, crosswords, and the like. So Gemini native games like Spellbinding, while cool, are not appealing to me. However, I am good at geography, and have been playing Worldle with friends for a few months:
 
 => https://worldle.teuteuf.fr WORLDLE
 
-I wondered if I could make a port of the game to Gemini. Where In The World is the result
+I wondered if I could make a port of the game to Gemini. “Where In The World” is the result.
 
 ## Where is a new puzzle available?
 A new puzzle is available every day at 0:00 GMT. New puzzles generate automatically every day. The same puzzle is used for everyone, every day, so you can share and compete with friends if you'd like.
@@ -17,7 +17,7 @@ You sure can. There is a link on the home page to play any previous puzzle.
 242
 
 ## Why isn't [blank] a valid guess?
-I really don't want to get into the politics of "what's a country" so I'm using ISO 3166-1 standard for the country code list. I also need to have a free, high resolution, monochrome map of the country, so certain valid territories have fallen off.
+I really don't want to get into the politics of "what's a country" so I'm using the ISO 3166-1 standard for the country code list. I also need to have a free, high resolution, monochrome map of the country, so certain valid territories have fallen off.
 
 ## What is the proximity percent?
 It's a concise way to represent the "closeness" of your guess. If your guess is at the opposite side of the world, you'll get 0%, if you guess the country, you'll get 100%.

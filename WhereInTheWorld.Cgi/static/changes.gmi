@@ -2,7 +2,7 @@
 
 * 2024-03-16: Feature: Changed country choosing algorithm so there will not be repeating patterns each year.
 * 2024-03-16: Feature: Now you can play previous puzzles!
-* 2024-03-16: Feature: Changed the URL for high resolution image link to have a ".png" extension, which makes many clients display that it as an image link.
+* 2024-03-16: Feature: Changed the URL for high resolution image link to have a ".png" extension, which makes many clients display it as an image link.
 * 2024-03-16: Feature: Added changelog.
 * 2023-06-23: Internal: Refactor to decouple game engine from Gemini renderer.
 * 2023-06-19: Bug fix: Typo in help.
