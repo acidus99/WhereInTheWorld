@@ -418,7 +418,7 @@
     "code": "FM",
     "latitude": 7.425554,
     "longitude": 150.550812,
-    "name": "Micronesia",
+    "name": "Federated States of Micronesia",
     "HasMap":  false
   },
   {
@@ -1165,12 +1165,6 @@
     "name": "Sudan"
   },
   {
-    "code": "SS",
-    "latitude": 6.85065,
-    "longitude": 30.659016,
-    "name": "South Sudan"
-  },
-  {
     "code": "SE",
     "latitude": 60.128161,
     "longitude": 18.643501,
@@ -1236,6 +1230,12 @@
     "longitude": -56.027783,
     "name": "Suriname"
   },
+  {
+    "code": "SS",
+    "latitude": 6.85065,
+    "longitude": 30.659016,
+    "name": "South Sudan"
+  }, 
   {
     "code": "ST",
     "latitude": 0.18636,
