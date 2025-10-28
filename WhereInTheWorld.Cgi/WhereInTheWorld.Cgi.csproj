@@ -1980,6 +1980,962 @@
     <Content Include="static\changes.gmi">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="static\locator-maps\ad.png" />
+    <Content Include="static\locator-maps\ad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ae.png" />
+    <Content Include="static\locator-maps\ae.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\af.png" />
+    <Content Include="static\locator-maps\af.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ag.png" />
+    <Content Include="static\locator-maps\ag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ai.png" />
+    <Content Include="static\locator-maps\ai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\al.png" />
+    <Content Include="static\locator-maps\al.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\am.png" />
+    <Content Include="static\locator-maps\am.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ao.png" />
+    <Content Include="static\locator-maps\ao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\aq.png" />
+    <Content Include="static\locator-maps\aq.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ar.png" />
+    <Content Include="static\locator-maps\ar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\as.png" />
+    <Content Include="static\locator-maps\as.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\at.png" />
+    <Content Include="static\locator-maps\at.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\au.png" />
+    <Content Include="static\locator-maps\au.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\aw.png" />
+    <Content Include="static\locator-maps\aw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\az.png" />
+    <Content Include="static\locator-maps\az.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ba.png" />
+    <Content Include="static\locator-maps\ba.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bb.png" />
+    <Content Include="static\locator-maps\bb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bd.png" />
+    <Content Include="static\locator-maps\bd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\be.png" />
+    <Content Include="static\locator-maps\be.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bf.png" />
+    <Content Include="static\locator-maps\bf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bg.png" />
+    <Content Include="static\locator-maps\bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bh.png" />
+    <Content Include="static\locator-maps\bh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bi.png" />
+    <Content Include="static\locator-maps\bi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bj.png" />
+    <Content Include="static\locator-maps\bj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bm.png" />
+    <Content Include="static\locator-maps\bm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bn.png" />
+    <Content Include="static\locator-maps\bn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bo.png" />
+    <Content Include="static\locator-maps\bo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\br.png" />
+    <Content Include="static\locator-maps\br.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bs.png" />
+    <Content Include="static\locator-maps\bs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bt.png" />
+    <Content Include="static\locator-maps\bt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bv.png" />
+    <Content Include="static\locator-maps\bv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bw.png" />
+    <Content Include="static\locator-maps\bw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\by.png" />
+    <Content Include="static\locator-maps\by.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\bz.png" />
+    <Content Include="static\locator-maps\bz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ca.png" />
+    <Content Include="static\locator-maps\ca.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cd.png" />
+    <Content Include="static\locator-maps\cd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cf.png" />
+    <Content Include="static\locator-maps\cf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cg.png" />
+    <Content Include="static\locator-maps\cg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ch.png" />
+    <Content Include="static\locator-maps\ch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ci.png" />
+    <Content Include="static\locator-maps\ci.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ck.png" />
+    <Content Include="static\locator-maps\ck.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cl.png" />
+    <Content Include="static\locator-maps\cl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cm.png" />
+    <Content Include="static\locator-maps\cm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cn.png" />
+    <Content Include="static\locator-maps\cn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\co.png" />
+    <Content Include="static\locator-maps\co.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cr.png" />
+    <Content Include="static\locator-maps\cr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cu.png" />
+    <Content Include="static\locator-maps\cu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cv.png" />
+    <Content Include="static\locator-maps\cv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cx.png" />
+    <Content Include="static\locator-maps\cx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cy.png" />
+    <Content Include="static\locator-maps\cy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\cz.png" />
+    <Content Include="static\locator-maps\cz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\de.png" />
+    <Content Include="static\locator-maps\de.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\dj.png" />
+    <Content Include="static\locator-maps\dj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\dk.png" />
+    <Content Include="static\locator-maps\dk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\dm.png" />
+    <Content Include="static\locator-maps\dm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\do.png" />
+    <Content Include="static\locator-maps\do.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\dz.png" />
+    <Content Include="static\locator-maps\dz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ec.png" />
+    <Content Include="static\locator-maps\ec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ee.png" />
+    <Content Include="static\locator-maps\ee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\eg.png" />
+    <Content Include="static\locator-maps\eg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\eh.png" />
+    <Content Include="static\locator-maps\eh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\er.png" />
+    <Content Include="static\locator-maps\er.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\es.png" />
+    <Content Include="static\locator-maps\es.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\et.png" />
+    <Content Include="static\locator-maps\et.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fi.png" />
+    <Content Include="static\locator-maps\fi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fj.png" />
+    <Content Include="static\locator-maps\fj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fk.png" />
+    <Content Include="static\locator-maps\fk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fm.png" />
+    <Content Include="static\locator-maps\fm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fo.png" />
+    <Content Include="static\locator-maps\fo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\fr.png" />
+    <Content Include="static\locator-maps\fr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ga.png" />
+    <Content Include="static\locator-maps\ga.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gb.png" />
+    <Content Include="static\locator-maps\gb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gd.png" />
+    <Content Include="static\locator-maps\gd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ge.png" />
+    <Content Include="static\locator-maps\ge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gf.png" />
+    <Content Include="static\locator-maps\gf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gg.png" />
+    <Content Include="static\locator-maps\gg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gh.png" />
+    <Content Include="static\locator-maps\gh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gi.png" />
+    <Content Include="static\locator-maps\gi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gl.png" />
+    <Content Include="static\locator-maps\gl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gm.png" />
+    <Content Include="static\locator-maps\gm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gn.png" />
+    <Content Include="static\locator-maps\gn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gp.png" />
+    <Content Include="static\locator-maps\gp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gq.png" />
+    <Content Include="static\locator-maps\gq.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gr.png" />
+    <Content Include="static\locator-maps\gr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gs.png" />
+    <Content Include="static\locator-maps\gs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gt.png" />
+    <Content Include="static\locator-maps\gt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gu.png" />
+    <Content Include="static\locator-maps\gu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gw.png" />
+    <Content Include="static\locator-maps\gw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\gy.png" />
+    <Content Include="static\locator-maps\gy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\hk.png" />
+    <Content Include="static\locator-maps\hk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\hm.png" />
+    <Content Include="static\locator-maps\hm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\hn.png" />
+    <Content Include="static\locator-maps\hn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\hr.png" />
+    <Content Include="static\locator-maps\hr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ht.png" />
+    <Content Include="static\locator-maps\ht.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\hu.png" />
+    <Content Include="static\locator-maps\hu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\id.png" />
+    <Content Include="static\locator-maps\id.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ie.png" />
+    <Content Include="static\locator-maps\ie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\il.png" />
+    <Content Include="static\locator-maps\il.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\im.png" />
+    <Content Include="static\locator-maps\im.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\in.png" />
+    <Content Include="static\locator-maps\in.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\io.png" />
+    <Content Include="static\locator-maps\io.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\iq.png" />
+    <Content Include="static\locator-maps\iq.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ir.png" />
+    <Content Include="static\locator-maps\ir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\is.png" />
+    <Content Include="static\locator-maps\is.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\it.png" />
+    <Content Include="static\locator-maps\it.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\je.png" />
+    <Content Include="static\locator-maps\je.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\jm.png" />
+    <Content Include="static\locator-maps\jm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\jo.png" />
+    <Content Include="static\locator-maps\jo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\jp.png" />
+    <Content Include="static\locator-maps\jp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ke.png" />
+    <Content Include="static\locator-maps\ke.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kg.png" />
+    <Content Include="static\locator-maps\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kh.png" />
+    <Content Include="static\locator-maps\kh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ki.png" />
+    <Content Include="static\locator-maps\ki.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\km.png" />
+    <Content Include="static\locator-maps\km.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kn.png" />
+    <Content Include="static\locator-maps\kn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kp.png" />
+    <Content Include="static\locator-maps\kp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kr.png" />
+    <Content Include="static\locator-maps\kr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kw.png" />
+    <Content Include="static\locator-maps\kw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ky.png" />
+    <Content Include="static\locator-maps\ky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\kz.png" />
+    <Content Include="static\locator-maps\kz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\la.png" />
+    <Content Include="static\locator-maps\la.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lb.png" />
+    <Content Include="static\locator-maps\lb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lc.png" />
+    <Content Include="static\locator-maps\lc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\li.png" />
+    <Content Include="static\locator-maps\li.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lk.png" />
+    <Content Include="static\locator-maps\lk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lr.png" />
+    <Content Include="static\locator-maps\lr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ls.png" />
+    <Content Include="static\locator-maps\ls.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lt.png" />
+    <Content Include="static\locator-maps\lt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lu.png" />
+    <Content Include="static\locator-maps\lu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\lv.png" />
+    <Content Include="static\locator-maps\lv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ly.png" />
+    <Content Include="static\locator-maps\ly.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ma.png" />
+    <Content Include="static\locator-maps\ma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mc.png" />
+    <Content Include="static\locator-maps\mc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\md.png" />
+    <Content Include="static\locator-maps\md.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\me.png" />
+    <Content Include="static\locator-maps\me.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mg.png" />
+    <Content Include="static\locator-maps\mg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mh.png" />
+    <Content Include="static\locator-maps\mh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mk.png" />
+    <Content Include="static\locator-maps\mk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ml.png" />
+    <Content Include="static\locator-maps\ml.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mm.png" />
+    <Content Include="static\locator-maps\mm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mn.png" />
+    <Content Include="static\locator-maps\mn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mo.png" />
+    <Content Include="static\locator-maps\mo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mp.png" />
+    <Content Include="static\locator-maps\mp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mr.png" />
+    <Content Include="static\locator-maps\mr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ms.png" />
+    <Content Include="static\locator-maps\ms.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mt.png" />
+    <Content Include="static\locator-maps\mt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mu.png" />
+    <Content Include="static\locator-maps\mu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mv.png" />
+    <Content Include="static\locator-maps\mv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mw.png" />
+    <Content Include="static\locator-maps\mw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mx.png" />
+    <Content Include="static\locator-maps\mx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\my.png" />
+    <Content Include="static\locator-maps\my.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\mz.png" />
+    <Content Include="static\locator-maps\mz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\na.png" />
+    <Content Include="static\locator-maps\na.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nc.png" />
+    <Content Include="static\locator-maps\nc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ne.png" />
+    <Content Include="static\locator-maps\ne.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nf.png" />
+    <Content Include="static\locator-maps\nf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ng.png" />
+    <Content Include="static\locator-maps\ng.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ni.png" />
+    <Content Include="static\locator-maps\ni.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nl.png" />
+    <Content Include="static\locator-maps\nl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\no.png" />
+    <Content Include="static\locator-maps\no.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\np.png" />
+    <Content Include="static\locator-maps\np.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nr.png" />
+    <Content Include="static\locator-maps\nr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nu.png" />
+    <Content Include="static\locator-maps\nu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\nz.png" />
+    <Content Include="static\locator-maps\nz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\om.png" />
+    <Content Include="static\locator-maps\om.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pa.png" />
+    <Content Include="static\locator-maps\pa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pe.png" />
+    <Content Include="static\locator-maps\pe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pf.png" />
+    <Content Include="static\locator-maps\pf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pg.png" />
+    <Content Include="static\locator-maps\pg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ph.png" />
+    <Content Include="static\locator-maps\ph.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pk.png" />
+    <Content Include="static\locator-maps\pk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pl.png" />
+    <Content Include="static\locator-maps\pl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pm.png" />
+    <Content Include="static\locator-maps\pm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pn.png" />
+    <Content Include="static\locator-maps\pn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pr.png" />
+    <Content Include="static\locator-maps\pr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pt.png" />
+    <Content Include="static\locator-maps\pt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\pw.png" />
+    <Content Include="static\locator-maps\pw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\py.png" />
+    <Content Include="static\locator-maps\py.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\qa.png" />
+    <Content Include="static\locator-maps\qa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\re.png" />
+    <Content Include="static\locator-maps\re.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ro.png" />
+    <Content Include="static\locator-maps\ro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\rs.png" />
+    <Content Include="static\locator-maps\rs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ru.png" />
+    <Content Include="static\locator-maps\ru.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\rw.png" />
+    <Content Include="static\locator-maps\rw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sa.png" />
+    <Content Include="static\locator-maps\sa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sb.png" />
+    <Content Include="static\locator-maps\sb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sc.png" />
+    <Content Include="static\locator-maps\sc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sd.png" />
+    <Content Include="static\locator-maps\sd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\se.png" />
+    <Content Include="static\locator-maps\se.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sg.png" />
+    <Content Include="static\locator-maps\sg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sh.png" />
+    <Content Include="static\locator-maps\sh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\si.png" />
+    <Content Include="static\locator-maps\si.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sj.png" />
+    <Content Include="static\locator-maps\sj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sk.png" />
+    <Content Include="static\locator-maps\sk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sl.png" />
+    <Content Include="static\locator-maps\sl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sm.png" />
+    <Content Include="static\locator-maps\sm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sn.png" />
+    <Content Include="static\locator-maps\sn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\so.png" />
+    <Content Include="static\locator-maps\so.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sr.png" />
+    <Content Include="static\locator-maps\sr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ss.png" />
+    <Content Include="static\locator-maps\ss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\st.png" />
+    <Content Include="static\locator-maps\st.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sv.png" />
+    <Content Include="static\locator-maps\sv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sy.png" />
+    <Content Include="static\locator-maps\sy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\sz.png" />
+    <Content Include="static\locator-maps\sz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tc.png" />
+    <Content Include="static\locator-maps\tc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\td.png" />
+    <Content Include="static\locator-maps\td.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tf.png" />
+    <Content Include="static\locator-maps\tf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tg.png" />
+    <Content Include="static\locator-maps\tg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\th.png" />
+    <Content Include="static\locator-maps\th.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tj.png" />
+    <Content Include="static\locator-maps\tj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tk.png" />
+    <Content Include="static\locator-maps\tk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tl.png" />
+    <Content Include="static\locator-maps\tl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tm.png" />
+    <Content Include="static\locator-maps\tm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tn.png" />
+    <Content Include="static\locator-maps\tn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\to.png" />
+    <Content Include="static\locator-maps\to.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tr.png" />
+    <Content Include="static\locator-maps\tr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tt.png" />
+    <Content Include="static\locator-maps\tt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tv.png" />
+    <Content Include="static\locator-maps\tv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tw.png" />
+    <Content Include="static\locator-maps\tw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\tz.png" />
+    <Content Include="static\locator-maps\tz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ua.png" />
+    <Content Include="static\locator-maps\ua.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ug.png" />
+    <Content Include="static\locator-maps\ug.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\us.png" />
+    <Content Include="static\locator-maps\us.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\uy.png" />
+    <Content Include="static\locator-maps\uy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\uz.png" />
+    <Content Include="static\locator-maps\uz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\va.png" />
+    <Content Include="static\locator-maps\va.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\vc.png" />
+    <Content Include="static\locator-maps\vc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ve.png" />
+    <Content Include="static\locator-maps\ve.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\vg.png" />
+    <Content Include="static\locator-maps\vg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\vi.png" />
+    <Content Include="static\locator-maps\vi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\vn.png" />
+    <Content Include="static\locator-maps\vn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\vu.png" />
+    <Content Include="static\locator-maps\vu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\wf.png" />
+    <Content Include="static\locator-maps\wf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ws.png" />
+    <Content Include="static\locator-maps\ws.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\xk.png" />
+    <Content Include="static\locator-maps\xk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\ye.png" />
+    <Content Include="static\locator-maps\ye.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\za.png" />
+    <Content Include="static\locator-maps\za.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\zm.png" />
+    <Content Include="static\locator-maps\zm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="static\locator-maps\zw.png" />
+    <Content Include="static\locator-maps\zw.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Update="static\faq.gmi">

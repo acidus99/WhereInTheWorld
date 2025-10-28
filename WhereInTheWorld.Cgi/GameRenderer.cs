@@ -119,6 +119,7 @@ public class GameRenderer
     {
         Output.WriteLine($"## You Win!");
         Output.WriteLine($"Congratulations! You correctly picked {state.Puzzle.TargetCountry.Name}!");
+        Output.WriteLine($"=> {RouteOptions.LocatorMapUrl(state.Puzzle.TargetCountry.Code)} See {state.Puzzle.TargetCountry.Name}'s location on a map");
         Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
         Output.WriteLine();
     }
@@ -127,6 +128,7 @@ public class GameRenderer
     {
         Output.WriteLine($"## Bummer");
         Output.WriteLine($"Nice try, but the country was {state.Puzzle.TargetCountry.Name}.");
+        Output.WriteLine($"=> {RouteOptions.LocatorMapUrl(state.Puzzle.TargetCountry.Code)} See {state.Puzzle.TargetCountry.Name}'s location on a map");
         Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
         Output.WriteLine();
     }
@@ -135,6 +137,7 @@ public class GameRenderer
     {
         Output.WriteLine($"## You Forfeit!");
         Output.WriteLine($"I guess when the country is {state.Puzzle.TargetCountry.Name}, the only winning move is not to play!");
+        Output.WriteLine($"=> {RouteOptions.LocatorMapUrl(state.Puzzle.TargetCountry.Code)} See {state.Puzzle.TargetCountry.Name}'s location on a map");
         Output.WriteLine($"=> /cgi-bin/wp.cgi/view?{HttpUtility.UrlEncode(state.Puzzle.TargetCountry.Name)} Read Wikipedia article about {state.Puzzle.TargetCountry.Name}");
         Output.WriteLine();
     }

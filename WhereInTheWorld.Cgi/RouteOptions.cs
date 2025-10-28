@@ -10,6 +10,9 @@ public static class RouteOptions
 
     public static string PngUrl(int puzzleNumber)
         => BaseCgiPath + $"/png/game/{puzzleNumber}/country.png";
+    
+    public static string LocatorMapUrl(string countryCode)
+        => BaseCgiPath + $"/locator-maps/{countryCode.ToLower()}.png";
 
     public static string PlayUrl(int puzzleNumber)
         => BaseCgiPath + $"/game/{puzzleNumber}/";
