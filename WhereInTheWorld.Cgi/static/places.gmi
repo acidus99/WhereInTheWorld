@@ -1,0 +1,264 @@
+# Countries and territories
+
+Below is a list of all 236 countries and territories in the game Where in the World. Each link shows a map of where that place is located on the globe.
+
+=> locator-maps/af.png Afghanistan
+=> locator-maps/al.png Albania
+=> locator-maps/dz.png Algeria
+=> locator-maps/as.png American Samoa
+=> locator-maps/ad.png Andorra
+=> locator-maps/ao.png Angola
+=> locator-maps/ai.png Anguilla
+=> locator-maps/aq.png Antarctica
+=> locator-maps/ag.png Antigua and Barbuda
+=> locator-maps/ar.png Argentina
+=> locator-maps/am.png Armenia
+=> locator-maps/aw.png Aruba
+=> locator-maps/au.png Australia
+=> locator-maps/at.png Austria
+=> locator-maps/az.png Azerbaijan
+
+=> locator-maps/bs.png Bahamas
+=> locator-maps/bh.png Bahrain
+=> locator-maps/bd.png Bangladesh
+=> locator-maps/bb.png Barbados
+=> locator-maps/by.png Belarus
+=> locator-maps/be.png Belgium
+=> locator-maps/bz.png Belize
+=> locator-maps/bj.png Benin
+=> locator-maps/bm.png Bermuda
+=> locator-maps/bt.png Bhutan
+=> locator-maps/bo.png Bolivia
+=> locator-maps/ba.png Bosnia and Herzegovina
+=> locator-maps/bw.png Botswana
+=> locator-maps/bv.png Bouvet Island
+=> locator-maps/br.png Brazil
+=> locator-maps/io.png British Indian Ocean Territory (Diego Garcia)
+=> locator-maps/vg.png British Virgin Islands
+=> locator-maps/bn.png Brunei
+=> locator-maps/bg.png Bulgaria
+=> locator-maps/bf.png Burkina Faso
+=> locator-maps/bi.png Burundi
+
+=> locator-maps/kh.png Cambodia
+=> locator-maps/cm.png Cameroon
+=> locator-maps/ca.png Canada
+=> locator-maps/cv.png Cape Verde
+=> locator-maps/ky.png Cayman Islands
+=> locator-maps/cf.png Central African Republic
+=> locator-maps/td.png Chad
+=> locator-maps/cl.png Chile
+=> locator-maps/cn.png China
+=> locator-maps/cx.png Christmas Island
+=> locator-maps/cc.png Cocos (Keeling) Islands
+=> locator-maps/co.png Colombia
+=> locator-maps/km.png Comoros
+=> locator-maps/cg.png Congo
+=> locator-maps/ck.png Cook Islands
+=> locator-maps/cr.png Costa Rica
+=> locator-maps/ci.png Côte d'Ivoire
+=> locator-maps/hr.png Croatia
+=> locator-maps/cu.png Cuba
+=> locator-maps/cy.png Cyprus
+=> locator-maps/cz.png Czechia
+
+=> locator-maps/cd.png Democratic Republic of the Congo
+=> locator-maps/dk.png Denmark
+=> locator-maps/dj.png Djibouti
+=> locator-maps/dm.png Dominica
+=> locator-maps/do.png Dominican Republic
+
+=> locator-maps/ec.png Ecuador
+=> locator-maps/eg.png Egypt
+=> locator-maps/sv.png El Salvador
+=> locator-maps/gq.png Equatorial Guinea
+=> locator-maps/er.png Eritrea
+=> locator-maps/ee.png Estonia
+=> locator-maps/sz.png Eswatini
+=> locator-maps/et.png Ethiopia
+
+=> locator-maps/fk.png Falkland Islands (Malvinas)
+=> locator-maps/fo.png Faroe Islands
+=> locator-maps/fj.png Fiji
+=> locator-maps/fi.png Finland
+=> locator-maps/fr.png France
+=> locator-maps/gf.png French Guiana
+=> locator-maps/pf.png French Polynesia
+=> locator-maps/tf.png French Southern Territories - Kerguelen Islands
+
+=> locator-maps/ga.png Gabon
+=> locator-maps/gm.png Gambia
+=> locator-maps/ge.png Georgia
+=> locator-maps/de.png Germany
+=> locator-maps/gh.png Ghana
+=> locator-maps/gi.png Gibraltar
+=> locator-maps/gr.png Greece
+=> locator-maps/gl.png Greenland
+=> locator-maps/gd.png Grenada
+=> locator-maps/gp.png Guadeloupe
+=> locator-maps/gu.png Guam
+=> locator-maps/gt.png Guatemala
+=> locator-maps/gg.png Guernsey
+=> locator-maps/gn.png Guinea
+=> locator-maps/gw.png Guinea-Bissau
+=> locator-maps/gy.png Guyana
+
+=> locator-maps/ht.png Haiti
+=> locator-maps/hm.png Heard Island and McDonald Islands
+=> locator-maps/hn.png Honduras
+=> locator-maps/hk.png Hong Kong
+=> locator-maps/hu.png Hungary
+
+=> locator-maps/is.png Iceland
+=> locator-maps/in.png India
+=> locator-maps/id.png Indonesia
+=> locator-maps/ir.png Iran
+=> locator-maps/iq.png Iraq
+=> locator-maps/ie.png Ireland
+=> locator-maps/im.png Isle of Man
+=> locator-maps/il.png Israel
+=> locator-maps/it.png Italy
+
+=> locator-maps/jm.png Jamaica
+=> locator-maps/jp.png Japan
+=> locator-maps/jo.png Jordan
+
+=> locator-maps/kz.png Kazakhstan
+=> locator-maps/ke.png Kenya
+=> locator-maps/ki.png Kiribati
+=> locator-maps/kw.png Kuwait
+=> locator-maps/kg.png Kyrgyzstan
+
+=> locator-maps/la.png Laos
+=> locator-maps/lv.png Latvia
+=> locator-maps/lb.png Lebanon
+=> locator-maps/ls.png Lesotho
+=> locator-maps/lr.png Liberia
+=> locator-maps/ly.png Libya
+=> locator-maps/li.png Liechtenstein
+=> locator-maps/lt.png Lithuania
+=> locator-maps/lu.png Luxembourg
+
+=> locator-maps/mo.png Macau
+=> locator-maps/mg.png Madagascar
+=> locator-maps/mw.png Malawi
+=> locator-maps/my.png Malaysia
+=> locator-maps/mv.png Maldives
+=> locator-maps/ml.png Mali
+=> locator-maps/mt.png Malta
+=> locator-maps/mq.png Martinique
+=> locator-maps/mr.png Mauritania
+=> locator-maps/mu.png Mauritius
+=> locator-maps/yt.png Mayotte
+=> locator-maps/mx.png Mexico
+=> locator-maps/md.png Moldova
+=> locator-maps/mc.png Monaco
+=> locator-maps/mn.png Mongolia
+=> locator-maps/me.png Montenegro
+=> locator-maps/ms.png Montserrat
+=> locator-maps/ma.png Morocco
+=> locator-maps/mz.png Mozambique
+=> locator-maps/mm.png Myanmar
+
+=> locator-maps/na.png Namibia
+=> locator-maps/nr.png Nauru
+=> locator-maps/np.png Nepal
+=> locator-maps/nl.png Netherlands
+=> locator-maps/nc.png New Caledonia
+=> locator-maps/nz.png New Zealand
+=> locator-maps/ni.png Nicaragua
+=> locator-maps/ne.png Niger
+=> locator-maps/ng.png Nigeria
+=> locator-maps/nu.png Niue
+=> locator-maps/nf.png Norfolk Island
+=> locator-maps/kp.png North Korea
+=> locator-maps/mk.png North Macedonia
+=> locator-maps/no.png Norway
+
+=> locator-maps/om.png Oman
+
+=> locator-maps/pk.png Pakistan
+=> locator-maps/pw.png Palau
+=> locator-maps/pa.png Panama
+=> locator-maps/pg.png Papua New Guinea
+=> locator-maps/py.png Paraguay
+=> locator-maps/pe.png Peru
+=> locator-maps/ph.png Philippines
+=> locator-maps/pn.png Pitcairn Islands
+=> locator-maps/pl.png Poland
+=> locator-maps/pt.png Portugal
+=> locator-maps/pr.png Puerto Rico
+
+=> locator-maps/qa.png Qatar
+
+=> locator-maps/re.png Réunion
+=> locator-maps/ro.png Romania
+=> locator-maps/ru.png Russia
+=> locator-maps/rw.png Rwanda
+
+=> locator-maps/sh.png Saint Helena
+=> locator-maps/kn.png Saint Kitts and Nevis
+=> locator-maps/lc.png Saint Lucia
+=> locator-maps/pm.png Saint Pierre and Miquelon
+=> locator-maps/vc.png Saint Vincent and the Grenadines
+=> locator-maps/ws.png Samoa
+=> locator-maps/sm.png San Marino
+=> locator-maps/st.png São Tomé and Príncipe
+=> locator-maps/sa.png Saudi Arabia
+=> locator-maps/sn.png Senegal
+=> locator-maps/rs.png Serbia
+=> locator-maps/sc.png Seychelles
+=> locator-maps/sl.png Sierra Leone
+=> locator-maps/sg.png Singapore
+=> locator-maps/sk.png Slovakia
+=> locator-maps/si.png Slovenia
+=> locator-maps/sb.png Solomon Islands
+=> locator-maps/so.png Somalia
+=> locator-maps/za.png South Africa
+=> locator-maps/gs.png South Georgia and the South Sandwich Islands
+=> locator-maps/kr.png South Korea
+=> locator-maps/ss.png South Sudan
+=> locator-maps/es.png Spain
+=> locator-maps/lk.png Sri Lanka
+=> locator-maps/sd.png Sudan
+=> locator-maps/sr.png Suriname
+=> locator-maps/sj.png Svalbard and Jan Mayen
+=> locator-maps/se.png Sweden
+=> locator-maps/ch.png Switzerland
+=> locator-maps/sy.png Syria
+
+=> locator-maps/tw.png Taiwan
+=> locator-maps/tj.png Tajikistan
+=> locator-maps/tz.png Tanzania
+=> locator-maps/th.png Thailand
+=> locator-maps/tl.png Timor-Leste
+=> locator-maps/tg.png Togo
+=> locator-maps/tk.png Tokelau
+=> locator-maps/to.png Tonga (Tongatapu and 'Eua)
+=> locator-maps/tt.png Trinidad and Tobago
+=> locator-maps/tn.png Tunisia
+=> locator-maps/tr.png Turkey
+=> locator-maps/tm.png Turkmenistan
+=> locator-maps/tc.png Turks and Caicos Islands
+
+=> locator-maps/vi.png U.S. Virgin Islands
+=> locator-maps/ug.png Uganda
+=> locator-maps/ua.png Ukraine
+=> locator-maps/ae.png United Arab Emirates
+=> locator-maps/gb.png United Kingdom
+=> locator-maps/us.png United States
+=> locator-maps/uy.png Uruguay
+=> locator-maps/uz.png Uzbekistan
+
+=> locator-maps/vu.png Vanuatu
+=> locator-maps/va.png Vatican City
+=> locator-maps/ve.png Venezuela
+=> locator-maps/vn.png Vietnam
+
+=> locator-maps/wf.png Wallis and Futuna
+=> locator-maps/eh.png Western Sahara
+
+=> locator-maps/ye.png Yemen
+
+=> locator-maps/zm.png Zambia
+=> locator-maps/zw.png Zimbabwe

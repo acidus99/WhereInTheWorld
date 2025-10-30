@@ -14,10 +14,14 @@ A new puzzle is available every day at 0:00 GMT. New puzzles generate automatica
 You sure can. There is a link on the home page to play any previous puzzle.
 
 ## How many countries and territories are there?
-242
+236.
+=> places.gmi List of all countries and territories in the game
 
 ## Why isn't [blank] a valid guess?
-I really don't want to get into the politics of "what's a country" so I'm using the ISO 3166-1 standard for the country code list. I also need to have a free, high resolution, monochrome map of the country, so certain valid territories have fallen off.
+I really don't want to get into the politics of "what's a country" so I'm using the ISO 3166-1 standard for the country code list. Additionally:
+* I need to have a freely licensed, high resolution, monochrome map of the country to create the ASCII version of the country
+* Some territories are spread out over a large area, meaning the image of the country is fairly "zoomed out." When this is converted to ASCII art, the geography becomes unrecognizable. Micronesia is a good example of this.
+These factors mean certain valid territories are not present in the game.
 
 ## What is the proximity percent?
 It's a concise way to represent the "closeness" of your guess. If your guess is at the opposite side of the world, you'll get 0%, if you guess the country, you'll get 100%.
