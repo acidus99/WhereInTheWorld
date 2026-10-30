@@ -1,6 +1,6 @@
 # Countries and territories
 
-Below is a list of all 236 countries and territories in the game Where in the World. Each link shows a map of where that place is located on the globe.
+Below is a list of all 236 countries and territories in the game Where In The World. Each link shows a map of where that place is located on the globe.
 
 => locator-maps/af.png Afghanistan
 => locator-maps/al.png Albania

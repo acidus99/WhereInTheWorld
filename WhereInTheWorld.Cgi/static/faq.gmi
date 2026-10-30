@@ -19,7 +19,7 @@ You sure can. There is a link on the home page to play any previous puzzle.
 
 ## Why isn't [blank] a valid guess?
 I really don't want to get into the politics of "what's a country" so I'm using the ISO 3166-1 standard for the country code list. Additionally:
-* I need to have a freely licensed, high resolution, monochrome map of the country to create the ASCII version of the country
+* I need to have a freely licensed, high-resolution, monochrome map of the country to create the ASCII version of the country
 * Some territories are spread out over a large area, meaning the image of the country is fairly "zoomed out." When this is converted to ASCII art, the geography becomes unrecognizable. Micronesia is a good example of this.
 These factors mean certain valid territories are not present in the game.
 
@@ -29,8 +29,8 @@ It's a concise way to represent the "closeness" of your guess. If your guess is 
 ## How are distances computed?
 The distance displayed for a guess is the distance between the center of the guessed country, and the actual country. For instance, the distance between United States and Canada is 2260 km even if they are next to each other.
 
-There are two reasons for this::
-* It's much easier to compute distance like this instead trying to do the math about borders.
+There are two reasons for this:
+* It's much easier to compute distance like this instead of trying to do the math about borders.
 * You can deduce information about the size of the target country with this information.
 
 ## Will you tell me the answer to today's puzzle?
@@ -44,11 +44,11 @@ Cool, then email me
 
 ## How is the country for each day's puzzle selected? I swear I'm seeing a pattern!
 
-For a time there was a pattern, though I doubt anyone noticed. Originally, I used a simple algorithm that used the day of the year as a seed to randomly pick a country. Unfortunately this means that the puzzle for 2023-01-01 is the same as 2024-01-01. Essentially the same countries were used in the same order, each year. This was fixed in 2024-03-17. To allow people to see what previous games looked like, games before March 17th 2024 use this older algorithm. Going forward there are no repeating patterns to the puzzles.
+For a time there was a pattern, though I doubt anyone noticed. Originally, I used a simple algorithm that used the day of the year as a seed to randomly pick a country. Unfortunately, this means that the puzzle for 2023-01-01 is the same as 2024-01-01. Essentially the same countries were used in the same order each year. This was fixed in 2024-03-17. To allow people to see what previous games looked like, games before March 17, 2024 use this older algorithm. Going forward, there are no repeating patterns in the puzzles.
 
 ## This is too hard.
 
-Some countries, especially small island nations in the South Pacific, can be tricky. There is a "I quit" option at that bottom of the list of countries. Selecting this forfeits the game and displays the answer.
+Some countries, especially small island nations in the South Pacific, can be tricky. There is an "I quit" option at the bottom of the list of countries. Selecting this forfeits the game and displays the answer.
 
 --
 => mailto:acidus@gemi.dev Made with 🌎 and ❤️ by Acidus
